@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Command, Option } from 'lucide-react';
 
@@ -110,7 +111,7 @@ const HomeRowMods = () => {
           <span>{key}</span>
           {mod && (
             <span className="text-xs text-keyboard-primary mt-1 flex items-center justify-center">
-              {modIcon}{mod}
+              {modIcon}<span className="font-bold">{mod}</span>
             </span>
           )}
         </div>
@@ -225,11 +226,20 @@ const HomeRowMods = () => {
         </div>
       </div>
 
-      {/* Custom cursor styles - Fixed by removing jsx and global props */}
+      {/* Fixed cursor styles to prevent jittering and cutting off */}
       <style>
         {`
+        .keyboard-container {
+          position: relative;
+        }
+        
         .keyboard-container .key {
-          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='120' viewport='0 0 100 100' style='fill:black;'><text y='50%' x='10%' dominant-baseline='middle' text-anchor='middle' font-size='100'>👆</text></svg>") 50 0, auto;
+          position: relative;
+          z-index: 10;
+        }
+        
+        .keyboard-container:hover {
+          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewport='0 0 32 32' style='fill:black;'><text y='50%' x='50%' dominant-baseline='middle' text-anchor='middle' font-size='28'>👆</text></svg>") 16 16, auto;
         }
         `}
       </style>
