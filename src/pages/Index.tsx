@@ -11,6 +11,7 @@ import HowItWorks from '../components/HowItWorks';
 import Roadmap from '../components/Roadmap';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
+import WhatIsZMK from '../components/WhatIsZMK';
 
 const Index = () => {
   // Smooth scroll to anchor links
@@ -49,6 +50,7 @@ const Index = () => {
       <main>
         <Hero />
         <WhatIsKeymap />
+        <WhatIsZMK />
         <WhyKanata />
         <WhatToolDoes />
         <Features />

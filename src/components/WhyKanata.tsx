@@ -12,35 +12,35 @@ const WhyKanata = () => {
             <span className="text-keyboard-secondary text-sm font-medium">The Comparison</span>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">
             Why Kanata Instead of Karabiner-Elements?
           </h2>
           
-          <p className="text-lg text-center text-keyboard-text/80 mb-12 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-center text-white mb-12 leading-relaxed max-w-3xl mx-auto">
             Karabiner-Elements is a great tool for simple remapping on macOS—but it's fundamentally limited.
             Here's why our converter targets Kanata, and why Karabiner simply can't support this kind of translation:
           </p>
           
           <div className="space-y-10">
-            <Card className="glass-card overflow-hidden border-0 bg-keyboard-dark/50 backdrop-blur-sm">
+            <Card className="glass-card overflow-hidden border-0 bg-gray-900/80 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row">
-                  <div className="bg-red-900/20 p-6 md:w-16 flex md:flex-col items-center justify-center">
-                    <X className="h-8 w-8 text-red-500" />
-                    <span className="md:hidden ml-3 font-bold text-red-500">PROBLEM</span>
-                    <span className="hidden md:block mt-2 font-bold text-red-500 [writing-mode:vertical-lr] rotate-180">PROBLEM</span>
+                  <div className="bg-red-900/30 p-6 md:w-16 flex md:flex-col items-center justify-center">
+                    <X className="h-8 w-8 text-red-400" />
+                    <span className="md:hidden ml-3 font-bold text-red-400">PROBLEM</span>
+                    <span className="hidden md:block mt-2 font-bold text-red-400 [writing-mode:vertical-lr] rotate-180">PROBLEM</span>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center mb-4">
                       <Code className="h-6 w-6 text-keyboard-primary mr-3" />
-                      <h3 className="text-xl font-bold">Karabiner Isn't a Programming Language</h3>
+                      <h3 className="text-xl font-bold text-white">Karabiner Isn't a Programming Language</h3>
                     </div>
-                    <p className="text-keyboard-text/80 mb-4">
+                    <p className="text-white mb-4">
                       Karabiner-Elements uses static JSON. There's no logic, no functions, no abstraction. 
                       You can't define reusable behaviors, dynamic layers, or generate rules. 
                       Every mapping must be written out by hand.
                     </p>
-                    <p className="text-keyboard-text/80">
+                    <p className="text-white">
                       ZMK, by contrast, is a logic-driven firmware. Translating its power to the desktop 
                       requires a remapping engine that supports composition and control flow—and Karabiner has none.
                     </p>
@@ -49,34 +49,34 @@ const WhyKanata = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card overflow-hidden border-0 bg-keyboard-dark/50 backdrop-blur-sm">
+            <Card className="glass-card overflow-hidden border-0 bg-gray-900/80 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row">
-                  <div className="bg-red-900/20 p-6 md:w-16 flex md:flex-col items-center justify-center">
-                    <X className="h-8 w-8 text-red-500" />
-                    <span className="md:hidden ml-3 font-bold text-red-500">PROBLEM</span>
-                    <span className="hidden md:block mt-2 font-bold text-red-500 [writing-mode:vertical-lr] rotate-180">PROBLEM</span>
+                  <div className="bg-red-900/30 p-6 md:w-16 flex md:flex-col items-center justify-center">
+                    <X className="h-8 w-8 text-red-400" />
+                    <span className="md:hidden ml-3 font-bold text-red-400">PROBLEM</span>
+                    <span className="hidden md:block mt-2 font-bold text-red-400 [writing-mode:vertical-lr] rotate-180">PROBLEM</span>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center mb-4">
                       <Layers className="h-6 w-6 text-keyboard-primary mr-3" />
-                      <h3 className="text-xl font-bold">Karabiner Fakes Layers with Variables</h3>
+                      <h3 className="text-xl font-bold text-white">Karabiner Fakes Layers with Variables</h3>
                     </div>
-                    <p className="text-keyboard-text/80 mb-4">
+                    <p className="text-white mb-4">
                       ZMK has true layer support. So does Kanata.
                       Karabiner doesn't. You simulate layers with hacky conditions and variables, 
                       resulting in dozens or hundreds of repetitive blocks. You can't programmatically 
                       switch, stack, or toggle behaviors in a clean way.
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 bg-keyboard-dark/40 p-4 rounded-lg">
-                      <div className="border border-green-500/20 p-4 rounded bg-green-950/10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 bg-keyboard-dark p-4 rounded-lg">
+                      <div className="border border-green-500/20 p-4 rounded bg-green-950/20">
                         <h4 className="text-green-400 font-mono font-semibold mb-2">Kanata gives you:</h4>
                         <pre className="font-mono text-sm text-green-300">
                           (deflayer base ...)<br />
                           (deflayer nav ...)
                         </pre>
                       </div>
-                      <div className="border border-red-500/20 p-4 rounded bg-red-950/10">
+                      <div className="border border-red-500/20 p-4 rounded bg-red-950/20">
                         <h4 className="text-red-400 font-mono font-semibold mb-2">Karabiner gives you:</h4>
                         <p className="font-mono text-sm text-red-300">200+ lines of JSON per "layer"</p>
                       </div>
@@ -86,20 +86,20 @@ const WhyKanata = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card overflow-hidden border-0 bg-keyboard-dark/50 backdrop-blur-sm">
+            <Card className="glass-card overflow-hidden border-0 bg-gray-900/80 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row">
-                  <div className="bg-red-900/20 p-6 md:w-16 flex md:flex-col items-center justify-center">
-                    <X className="h-8 w-8 text-red-500" />
-                    <span className="md:hidden ml-3 font-bold text-red-500">PROBLEM</span>
-                    <span className="hidden md:block mt-2 font-bold text-red-500 [writing-mode:vertical-lr] rotate-180">PROBLEM</span>
+                  <div className="bg-red-900/30 p-6 md:w-16 flex md:flex-col items-center justify-center">
+                    <X className="h-8 w-8 text-red-400" />
+                    <span className="md:hidden ml-3 font-bold text-red-400">PROBLEM</span>
+                    <span className="hidden md:block mt-2 font-bold text-red-400 [writing-mode:vertical-lr] rotate-180">PROBLEM</span>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center mb-4">
                       <Puzzle className="h-6 w-6 text-keyboard-primary mr-3" />
-                      <h3 className="text-xl font-bold">Complex Behaviors? Not in Karabiner</h3>
+                      <h3 className="text-xl font-bold text-white">Complex Behaviors? Not in Karabiner</h3>
                     </div>
-                    <p className="text-keyboard-text/80 mb-6">
+                    <p className="text-white mb-6">
                       Want tap-dance, one-shot modifiers, or combos with three keys?
                     </p>
                     <div className="grid grid-cols-3 gap-4 mb-6">
@@ -107,22 +107,22 @@ const WhyKanata = () => {
                         <div className="bg-keyboard-dark/60 p-3 rounded-full mb-3">
                           <Check className="h-5 w-5 text-green-500" />
                         </div>
-                        <span className="text-center font-semibold">ZMK does it</span>
+                        <span className="text-center font-semibold text-white">ZMK does it</span>
                       </div>
                       <div className="flex flex-col items-center">
                         <div className="bg-keyboard-dark/60 p-3 rounded-full mb-3">
                           <Check className="h-5 w-5 text-green-500" />
                         </div>
-                        <span className="text-center font-semibold">Kanata does it</span>
+                        <span className="text-center font-semibold text-white">Kanata does it</span>
                       </div>
                       <div className="flex flex-col items-center">
                         <div className="bg-keyboard-dark/60 p-3 rounded-full mb-3">
                           <X className="h-5 w-5 text-red-500" />
                         </div>
-                        <span className="text-center font-semibold">Karabiner? No shot.</span>
+                        <span className="text-center font-semibold text-white">Karabiner? No shot.</span>
                       </div>
                     </div>
-                    <p className="text-keyboard-text/80">
+                    <p className="text-white">
                       You'd have to break and re-simulate every behavior—manually—while hoping 
                       Karabiner's rigid schema doesn't block you. Kanata just runs your logic.
                     </p>
@@ -131,10 +131,10 @@ const WhyKanata = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card overflow-hidden border-0 bg-keyboard-dark/50 backdrop-blur-sm">
+            <Card className="glass-card overflow-hidden border-0 bg-gray-900/80 backdrop-blur-sm">
               <CardContent className="p-0">
                 <div className="flex flex-col md:flex-row">
-                  <div className="bg-green-900/20 p-6 md:w-16 flex md:flex-col items-center justify-center">
+                  <div className="bg-green-900/30 p-6 md:w-16 flex md:flex-col items-center justify-center">
                     <Check className="h-8 w-8 text-green-500" />
                     <span className="md:hidden ml-3 font-bold text-green-500">SOLUTION</span>
                     <span className="hidden md:block mt-2 font-bold text-green-500 [writing-mode:vertical-lr] rotate-180">SOLUTION</span>
@@ -142,23 +142,23 @@ const WhyKanata = () => {
                   <div className="p-6">
                     <div className="flex items-center mb-4">
                       <Brain className="h-6 w-6 text-keyboard-primary mr-3" />
-                      <h3 className="text-xl font-bold">Kanata Is Code</h3>
+                      <h3 className="text-xl font-bold text-white">Kanata Is Code</h3>
                     </div>
-                    <p className="text-keyboard-text/80 mb-6">
+                    <p className="text-white mb-6">
                       That's the difference. Kanata is a language, not a static config format.
                     </p>
                     <ul className="space-y-3">
                       <li className="flex">
                         <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>You can translate ZMK's logic directly</span>
+                        <span className="text-white">You can translate ZMK's logic directly</span>
                       </li>
                       <li className="flex">
                         <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>You can define behaviors once and reuse them</span>
+                        <span className="text-white">You can define behaviors once and reuse them</span>
                       </li>
                       <li className="flex">
                         <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>You can iterate fast, reload instantly, and scale without clutter</span>
+                        <span className="text-white">You can iterate fast, reload instantly, and scale without clutter</span>
                       </li>
                     </ul>
                   </div>
@@ -167,17 +167,17 @@ const WhyKanata = () => {
             </Card>
           </div>
 
-          <div className="mt-12 p-6 border border-keyboard-primary/20 rounded-lg bg-keyboard-dark/60 backdrop-blur-sm">
-            <h3 className="text-xl font-bold mb-4 flex items-center">
+          <div className="mt-12 p-6 border border-keyboard-primary/20 rounded-lg bg-gray-900/80 backdrop-blur-sm">
+            <h3 className="text-xl font-bold mb-4 flex items-center text-white">
               <Brain className="h-6 w-6 text-keyboard-primary mr-3" /> TL;DR
             </h3>
-            <p className="text-keyboard-text/80 mb-6">
+            <p className="text-white mb-6">
               You can't build a serious ZMK converter on top of Karabiner-Elements.
             </p>
-            <p className="text-keyboard-text/80 mb-4">
+            <p className="text-white mb-4">
               It's not expressive enough. It's not programmable enough. And it was never meant to be.
             </p>
-            <p className="font-semibold text-keyboard-text">
+            <p className="font-semibold text-white">
               Kanata is. That's why this project exists.
               <br />
               <span className="text-keyboard-primary">Code-level remapping. Declarative firmware. Bridged.</span>
