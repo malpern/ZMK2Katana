@@ -43,7 +43,7 @@ const WhatIsZMK = () => {
               <div className="bg-gray-900/80 p-6 rounded-lg border border-white/10 backdrop-blur-sm h-full">
                 <div className="flex justify-center mb-6">
                   <img 
-                    src="https://zmk.dev/assets/zmk-logo-light.png" 
+                    src="https://www.zephyrproject.org/wp-content/uploads/2021/09/zmk_logo.svg" 
                     alt="ZMK Logo" 
                     className="h-24"
                   />
@@ -162,6 +162,10 @@ const WhatIsZMK = () => {
                     src={keyboard.image} 
                     alt={keyboard.name}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://placehold.co/400x200/1e1e1e/fafafa?text=Keyboard+Image";
+                    }}
                   />
                 </div>
                 <div className="p-4 flex items-center justify-between">
