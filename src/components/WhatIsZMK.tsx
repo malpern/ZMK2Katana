@@ -10,8 +10,8 @@ const keyboards = [
   },
   {
     name: "Ferris Sweep",
-    image: "https://github.com/davidphilipbarr/Sweep/raw/main/img/sweep.png",
-    url: "https://typeractive.xyz"
+    image: "https://kriscables.com/wp-content/uploads/2022/12/DSC05868-3-2048x637.jpg",
+    url: "https://kriscables.com/ferris-sweep/"
   },
   {
     name: "Lily58",
