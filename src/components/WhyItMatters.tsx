@@ -1,19 +1,22 @@
-
 import React from 'react';
 
 const WhyItMatters = () => {
   return (
     <section id="why" className="py-20 bg-keyboard-dark">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block bg-keyboard-accent/10 px-4 py-1.5 rounded-full mb-6">
-            <span className="text-keyboard-accent text-sm font-medium">Why It Matters</span>
+        <div className="max-w-4xl mx-auto">
+          {/* Keep header centered */}
+          <div className="text-center mb-10">
+            <div className="inline-block bg-keyboard-accent/10 px-4 py-1.5 rounded-full mb-6">
+              <span className="text-keyboard-accent text-sm font-medium">Why It Matters</span>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold">
+              More Than Just a Converter
+            </h2>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            More Than Just a Converter
-          </h2>
-          
+          {/* Cards - left aligned */}
           <div className="flex flex-col space-y-6">
             <div className="gradient-border transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-keyboard-primary/20">
               <div className="p-6">
