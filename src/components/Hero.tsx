@@ -54,7 +54,7 @@ const Hero = () => {
               </div>
               <div className="p-4 flex-1 flex flex-col">
                 <img 
-                  src="https://raw.githubusercontent.com/nickcoutsos/keymap-editor/main/docs/screenshot-dark.png" 
+                  src="/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png" 
                   alt="Nick's Keymap Editor Screenshot" 
                   className="rounded border border-gray-700 shadow-lg mb-4"
                 />
