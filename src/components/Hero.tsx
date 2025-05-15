@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Keyboard } from "lucide-react";
+import { ArrowRight, Keyboard, Github } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -21,11 +21,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-8 py-6 text-lg w-full sm:w-auto">
-              Join the Waitlist
+            <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-8 py-6 text-lg w-full sm:w-auto flex items-center gap-2">
+              <Github className="h-5 w-5" />
+              View on GitHub
             </Button>
             <Button variant="outline" className="border-keyboard-secondary text-keyboard-secondary hover:bg-keyboard-secondary/10 px-8 py-6 text-lg w-full sm:w-auto">
-              <span>View on GitHub</span>
+              <span>Learn More</span>
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>

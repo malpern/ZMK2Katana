@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Github, Star } from "lucide-react";
 
 const Newsletter = () => {
   return (
@@ -14,8 +14,7 @@ const Newsletter = () => {
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4">Join Our GitHub Project</h2>
               <p className="text-keyboard-text/70 leading-relaxed">
-                Contribute to the ZMK2Kanata project, report issues, or star the repository to show your support. 
-                We welcome community contributions!
+                Star the repository to stay updated with new features and releases. We welcome community contributions and feedback!
               </p>
             </div>
             
@@ -28,8 +27,8 @@ const Newsletter = () => {
                 <Button 
                   className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white h-12 px-8 flex items-center gap-2"
                 >
-                  <Github className="h-5 w-5" />
-                  View on GitHub
+                  <Star className="h-5 w-5" />
+                  Star on GitHub
                 </Button>
               </a>
             </div>
