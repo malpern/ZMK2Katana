@@ -94,7 +94,7 @@ const UserGuide = () => {
   f_sft (tap-hold-release 200 f lsft)
   j_sft (tap-hold-release 200 j rsft)
   k_ctl (tap-hold-release 200 k rctl)
-  l_alt (tap-hold-release 200 l ralt)
+  l_alt (tap-hold-release 200 l lalt)
   semi_met (tap-hold-release 200 ; rmet)
   spc_fn (tap-hold-release 200 spc (layer-toggle fn))
 )`;
@@ -358,52 +358,6 @@ const UserGuide = () => {
                   </p>
                 </div>
               </div>
-              
-              <div className="bg-gray-900/60 rounded-lg p-4 mb-6 font-mono text-sm overflow-x-auto">
-                <pre className="text-keyboard-text/90">
-{`// Example of a converted file
-(defcfg
-  process-unmapped-keys yes
-)
-
-(defsrc
-  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \\
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet rctl
-)
-
-(deflayer base
-  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \\
-  @esc_ctrl @a_met @s_alt @d_ctl @f_sft g    h    @j_sft @k_ctl @l_alt @semi_met '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           @spc_fn         ralt rmet rctl
-)
-
-(deflayer fn
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    left down up   rght _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _
-)
-
-(defalias
-  esc_ctrl (tap-hold-release 200 esc lctl)
-  a_met (tap-hold-release 200 a lmet)
-  s_alt (tap-hold-release 200 s lalt)
-  d_ctl (tap-hold-release 200 d lctl)
-  f_sft (tap-hold-release 200 f lsft)
-  j_sft (tap-hold-release 200 j rsft)
-  k_ctl (tap-hold-release 200 k rctl)
-  l_alt (tap-hold-release 200 l lalt)
-  semi_met (tap-hold-release 200 ; rmet)
-  spc_fn (tap-hold-release 200 spc (layer-toggle fn))
-)`}
-                </pre>
-              </div>
             </div>
           </section>
           
@@ -421,7 +375,7 @@ const UserGuide = () => {
                 <div className="md:w-1/2">
                   <h3 className="text-xl font-semibold mb-3">Install Kanata</h3>
                   <p className="text-keyboard-text/80 leading-relaxed mb-4">
-                    Use Homebrew to easily install Kanata on your MacBook:
+                    Use <a href="https://brew.sh" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:text-keyboard-primary/80 underline">Homebrew</a> to easily install <a href="https://github.com/jtroo/kanata" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:text-keyboard-primary/80 underline">Kanata</a> on your MacBook:
                   </p>
                   
                   <div className="bg-gray-900/60 rounded-lg p-4 mb-6 font-mono text-sm overflow-x-auto relative group">
@@ -713,7 +667,7 @@ const UserGuide = () => {
               </p>
               
               <div className="mb-6">
-                <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-6 py-5 flex items-center gap-2">
+                <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-black font-medium px-6 py-5 flex items-center gap-2">
                   <Github className="h-5 w-5" />
                   Contribute Documentation
                 </Button>
@@ -731,8 +685,8 @@ const UserGuide = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Ready to Get Started?</h2>
               
               <div className="flex flex-col md:flex-row justify-center gap-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-8 py-6 text-lg w-full flex items-center gap-2">
+                <a href="https://github.com/malpern/zmk-to-kanata" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-black font-medium px-8 py-6 text-lg w-full flex items-center gap-2">
                     <Github className="h-5 w-5" />
                     View on GitHub
                   </Button>

@@ -27,11 +27,6 @@ const Header = () => {
             <a href="#howitworks" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               How It Works
             </a>
-            {/* Roadmap link removed
-            <a href="#roadmap" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
-              Roadmap
-            </a>
-            */}
             <a href="#mac-enhancements" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               Keyboard Superpowers
             </a>
@@ -43,7 +38,7 @@ const Header = () => {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-white flex items-center gap-2">
+              <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-black font-medium flex items-center gap-2">
                 <Github className="h-4 w-4" />
                 GitHub
               </Button>
@@ -85,15 +80,6 @@ const Header = () => {
             >
               How It Works
             </a>
-            {/* Roadmap link removed
-            <a 
-              href="#roadmap" 
-              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Roadmap
-            </a>
-            */}
             <a 
               href="#mac-enhancements" 
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
@@ -105,7 +91,7 @@ const Header = () => {
               href="https://github.com/malpern/zmk-to-kanata" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white py-2 px-4 rounded flex items-center justify-center gap-2"
+              className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-black font-medium py-2 px-4 rounded flex items-center justify-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
               <Github className="h-5 w-5" />
