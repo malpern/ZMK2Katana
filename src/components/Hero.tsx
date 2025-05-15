@@ -20,7 +20,7 @@ const Hero = () => {
             A bridge between firmware and software keyboard customization, bringing your ZMK configurations to Kanata for ultimate flexibility.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-8 py-6 text-lg w-full sm:w-auto">
               Join the Waitlist
             </Button>
@@ -28,6 +28,16 @@ const Hero = () => {
               <span>View on GitHub</span>
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
+          </div>
+          
+          {/* Keyboard Hero Image */}
+          <div className="mb-10 relative">
+            <div className="absolute inset-0 bg-keyboard-primary/20 blur-3xl rounded-full opacity-20"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" 
+              alt="Zoomed in Mac Magic Keyboard" 
+              className="rounded-xl w-full max-w-2xl mx-auto shadow-2xl border border-white/10 float-element"
+            />
           </div>
           
           {/* Code Preview */}
