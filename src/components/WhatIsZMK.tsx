@@ -5,8 +5,8 @@ import { ExternalLink } from 'lucide-react';
 const keyboards = [
   {
     name: "Corne Keyboard",
-    image: "/lovable-uploads/d297019f-86e6-4cc0-bbca-fd86db385dc9.png",
-    url: "https://typeractive.xyz"
+    image: "https://keebmaker.com/cdn/shop/files/customKeeb_13_11493d68-c1c4-409a-9449-132b236ddc30.png?v=1719354275&width=990",
+    url: "https://keebmaker.com/products/corne-36-lp-keyboard?variant=49212633448747&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoqKLVwuCtzRkeHfna1NybgOs9aRJD2jNtF_59wh7OALv-kRFd-6c3o&gQT=2"
   },
   {
     name: "Ferris Sweep",
