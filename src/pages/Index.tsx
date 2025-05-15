@@ -49,10 +49,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <WhatToolDoes />
         <WhatIsKeymap />
         <WhatIsZMK />
         <WhyKanata />
-        <WhatToolDoes />
         <Features />
         <WhyItMatters />
         <HowItWorks />

@@ -54,47 +54,6 @@ const WhatIsKeymap = () => {
             </div>
           </div>
           
-          {/* ZMK Section */}
-          <div className="glass-card p-8 mb-12">
-            <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-              <div className="md:w-1/3 flex justify-center">
-                <img 
-                  src="https://zmk.dev/assets/zmk-logo.svg" 
-                  alt="ZMK Firmware Logo" 
-                  className="w-48 h-48"
-                />
-              </div>
-              <div className="md:w-2/3">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">
-                  What is ZMK?
-                </h3>
-                <p className="mb-4 text-keyboard-text/80 leading-relaxed">
-                  ZMK is a modern, open-source keyboard firmware designed for wireless, split keyboards using 
-                  Bluetooth Low Energy. It's built on the Zephyr RTOS, providing excellent power efficiency and 
-                  advanced features for custom keyboards.
-                </p>
-                <h4 className="text-xl font-semibold mb-2 text-keyboard-text">Key features:</h4>
-                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-2">
-                  <li>Wireless-first approach with Bluetooth Low Energy</li>
-                  <li>Excellent battery life optimization</li>
-                  <li>Powerful key behaviors like tap-hold, combos, and macros</li>
-                  <li>Multi-layer support for complex configurations</li>
-                  <li>First-class split keyboard support</li>
-                </ul>
-                <div className="mt-4">
-                  <a 
-                    href="https://zmk.dev/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-keyboard-primary hover:text-keyboard-secondary transition-colors"
-                  >
-                    Learn more about ZMK →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
           {/* Kanata Section */}
           <div className="glass-card p-8">
             <div className="flex flex-col md:flex-row gap-8 items-center">

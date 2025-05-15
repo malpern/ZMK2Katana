@@ -6,22 +6,22 @@ const keyboards = [
   {
     name: "Corne Keyboard",
     image: "https://cdn.shopify.com/s/files/1/0227/9171/6941/files/PXL_20230321_122459080_a2e70b89-2e76-4a2f-9f50-e96ac56e6708_900x.jpg",
-    url: "https://lowprokb.ca/products/corne"
+    url: "https://typeractive.xyz"
   },
   {
     name: "Ferris Sweep",
     image: "https://github.com/davidphilipbarr/Sweep/raw/main/img/sweep.png",
-    url: "https://github.com/davidphilipbarr/Sweep"
+    url: "https://typeractive.xyz"
   },
   {
     name: "Lily58",
     image: "https://cdn.shopify.com/s/files/1/0599/3460/5491/files/Lily58-Pro-Split-Keyboard-Kit-Keycaps-min.jpg",
-    url: "https://keyhive.xyz/shop/lily58"
+    url: "https://typeractive.xyz"
   },
   {
     name: "Sofle Keyboard",
     image: "https://cdn.shopify.com/s/files/1/0227/9171/6941/files/PXL_20230321_122548178_9a6359b5-0e7d-4e0c-9655-be887c847c38_900x.jpg",
-    url: "https://josefadamcik.github.io/SofleKeyboard/"
+    url: "https://typeractive.xyz"
   }
 ];
 
