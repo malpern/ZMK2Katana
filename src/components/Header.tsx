@@ -29,6 +29,9 @@ const Header = () => {
             <a href="#roadmap" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               Roadmap
             </a>
+            <a href="#mac-enhancements" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
+              Keyboard Superpowers
+            </a>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -81,6 +84,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Roadmap
+            </a>
+            <a 
+              href="#mac-enhancements" 
+              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Keyboard Superpowers
             </a>
             <a 
               href="https://github.com" 
