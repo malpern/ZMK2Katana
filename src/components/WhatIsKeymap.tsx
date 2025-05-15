@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const WhatIsKeymap = () => {
   return (
@@ -17,12 +18,17 @@ const WhatIsKeymap = () => {
           {/* Nick's Keymap Editor Section */}
           <div className="glass-card p-8 mb-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/3">
+              <div className="md:w-1/3 relative">
                 <img 
                   src="/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png" 
                   alt="Nick's Keymap Editor Screenshot" 
                   className="rounded-lg shadow-xl border border-white/10"
                 />
+                {/* Nick's photo overlapping bottom left corner */}
+                <Avatar className="absolute -bottom-4 -left-4 h-16 w-16 border-4 border-keyboard-dark shadow-lg">
+                  <AvatarImage src="https://nickcoutsos.github.io/headshot-small.jpg" alt="Nick Coutsos" />
+                  <AvatarFallback className="bg-keyboard-primary text-white font-medium">NC</AvatarFallback>
+                </Avatar>
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">
