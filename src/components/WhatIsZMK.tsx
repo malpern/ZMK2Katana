@@ -19,9 +19,9 @@ const keyboards = [
     url: "https://typeractive.xyz"
   },
   {
-    name: "Sofle Keyboard",
-    image: "https://cdn.shopify.com/s/files/1/0227/9171/6941/files/PXL_20230321_122548178_9a6359b5-0e7d-4e0c-9655-be887c847c38_900x.jpg",
-    url: "https://typeractive.xyz"
+    name: "Dactyl Manuform",
+    image: "https://tuxtower.net/blog/img/dactylmanuform.jpg",
+    url: "https://tuxtower.net/blog/dactylmanuform/"
   }
 ];
 
