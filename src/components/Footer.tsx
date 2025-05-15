@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Code, Github, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (

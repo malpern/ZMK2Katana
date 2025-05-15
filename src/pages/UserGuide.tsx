@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Info, Terminal, Code, Keyboard, Github, CheckCircle, Copy } from "lucide-react";
@@ -610,4 +609,3 @@ const UserGuide = () => {
 };
 
 export default UserGuide;
-
