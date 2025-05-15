@@ -54,9 +54,9 @@ const Index = () => {
         <WhatToolDoes />
         <WhatIsKeymap />
         <WhatIsZMK />
+        <Features />
         <HomeRowMods />
         <WhyKanata />
-        <Features />
         <WhyItMatters />
         <HowItWorks />
         <Roadmap />
