@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Github, Star } from "lucide-react";
+import { Github, Star, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Newsletter = () => {
   return (
@@ -18,19 +19,29 @@ const Newsletter = () => {
               </p>
             </div>
             
-            <div className="flex justify-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
                 href="https://github.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
                 <Button 
-                  className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white h-12 px-8 flex items-center gap-2"
+                  className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white h-12 px-8 flex items-center gap-2 w-full"
                 >
                   <Star className="h-5 w-5" />
                   Star on GitHub
                 </Button>
               </a>
+              
+              <Link to="/user-guide">
+                <Button 
+                  variant="outline"
+                  className="border-keyboard-text/20 text-keyboard-text hover:bg-white/5 h-12 px-8 flex items-center gap-2 w-full"
+                >
+                  <BookOpen className="h-5 w-5" />
+                  Read User Guide
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Keyboard, Github } from "lucide-react";
+import { ArrowRight, Keyboard, Github, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -25,10 +25,12 @@ const Hero = () => {
               <Github className="h-5 w-5" />
               View on GitHub
             </Button>
-            <Button variant="outline" className="border-keyboard-secondary text-keyboard-secondary hover:bg-keyboard-secondary/10 px-8 py-6 text-lg w-full sm:w-auto">
-              <span>Learn More</span>
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link to="/user-guide">
+              <Button variant="outline" className="border-keyboard-secondary text-keyboard-secondary hover:bg-keyboard-secondary/10 px-8 py-6 text-lg w-full sm:w-auto flex items-center gap-2">
+                <BookOpen className="h-5 w-5" />
+                <span>User Guide</span>
+              </Button>
+            </Link>
           </div>
           
           {/* Keyboard Hero Image */}
