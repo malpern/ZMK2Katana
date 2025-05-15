@@ -27,16 +27,14 @@ const keyboards = [
 
 const WhatIsZMK = () => {
   return (
-    <section id="what-is-zmk" className="py-16 bg-keyboard-dark/80">
+    <section id="what-is-zmk" className="py-10 bg-keyboard-dark/80">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            What is ZMK?
-          </h2>
+          {/* Removed the "What is ZMK?" headline */}
           
           {/* ZMK Section - Matching the other sections visual template */}
-          <div className="glass-card p-8 mb-12">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="glass-card p-8 mb-8">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="md:w-1/3 flex justify-center">
                 <img 
                   src="https://www.zephyrproject.org/wp-content/uploads/2021/09/zmk_logo.svg" 
@@ -53,14 +51,14 @@ const WhatIsZMK = () => {
                   dozens of wireless, low-power split keyboards and offers state-of-the-art features.
                 </p>
                 <h4 className="text-xl font-semibold mb-2 text-keyboard-text">Key features:</h4>
-                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-2">
+                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-1">
                   <li><span className="font-semibold">Wireless-First</span>: Built from the ground up for Bluetooth LE</li>
                   <li><span className="font-semibold">Power Efficient</span>: Designed for long battery life</li>
                   <li><span className="font-semibold">Powerful Behaviors</span>: Tap-dance, combos, and more</li>
                   <li><span className="font-semibold">Open Source</span>: Community-driven development</li>
                   <li><span className="font-semibold">Advanced Features</span>: Layers, combos, hold-tap, macros</li>
                 </ul>
-                <div className="mt-6">
+                <div className="mt-4">
                   <a 
                     href="https://zmk.dev" 
                     target="_blank" 
@@ -75,8 +73,8 @@ const WhatIsZMK = () => {
             </div>
           </div>
           
-          <h3 className="text-2xl font-bold mb-6 text-center">Popular ZMK-Powered Custom Mechanical Keyboards</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          <h3 className="text-2xl font-bold mb-4 text-center">Popular ZMK-Powered Custom Mechanical Keyboards</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {keyboards.map((keyboard, index) => (
               <a 
                 key={index}
@@ -105,7 +103,7 @@ const WhatIsZMK = () => {
           </div>
           
           <div className="glass-card p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">...now you can get the same power using your basic mac keyboard</h3>
+            <h3 className="text-2xl font-bold mb-4 text-center">...now you can get the same power using your basic mac keyboard</h3>
             <div className="overflow-hidden rounded-lg">
               <img 
                 src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK73?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=d0dMVFphZTh2YTQyb0pHekNNbjdSZ2tuVHYzMERCZURia3c5SzJFOTlPanVCdEVHeHhPSGNpL2MzN05PekJuUXJoN1hCTUVacmhJZEQrWXRXUTNKUUE" 
