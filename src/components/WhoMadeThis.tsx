@@ -29,8 +29,8 @@ const WhoMadeThis = () => {
               <div className="text-left space-y-4">
                 <h3 className="text-2xl font-semibold text-center md:text-left">Micah Alpern</h3>
                 
-                <p className="text-keyboard-text/70 italic mb-2">
-                  Enjoyer of custom mechanical keyboards, design, and making
+                <p className="text-keyboard-text/70 font-bold text-lg mb-2">
+                  Enjoyer of custom mechanical keyboards, design, and making things.
                 </p>
                 
                 <p className="text-keyboard-text/80 leading-relaxed">
