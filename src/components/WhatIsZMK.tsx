@@ -47,7 +47,7 @@ const WhatIsZMK = () => {
                   />
                 </a>
               </div>
-              <div className="md:w-2/3">
+              <div className="md:w-2/3 text-left">
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">
                   What is ZMK?
                 </h3>
@@ -108,7 +108,7 @@ const WhatIsZMK = () => {
           </div>
           
           <div className="glass-card p-8">
-            <h3 className="text-2xl font-bold mb-4">...now you can get the same power using your basic mac keyboard</h3>
+            <h3 className="text-2xl font-bold mb-4 text-left">...now you can get the same power using your basic mac keyboard</h3>
             <div className="overflow-hidden rounded-lg">
               <a 
                 href="https://www.apple.com/shop/product/MK2A3LL/A/magic-keyboard-us-english" 

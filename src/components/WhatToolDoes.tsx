@@ -17,7 +17,7 @@ const WhatToolDoes = () => {
             <ul className="space-y-6">
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
-                <div>
+                <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">Converts ZMK keymaps to Kanata configs</h3>
                   <p className="text-keyboard-text/70 mt-1">
                     Upload your ZMK (DTS or JSON) files and get Kanata-ready configs.
@@ -27,10 +27,10 @@ const WhatToolDoes = () => {
               
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
-                <div>
+                <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">Translates advanced keyboard features</h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    <a href="https://zmk.dev/docs/keymaps#layers" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">Layers</a>,{' '}
+                    <a href="https://zmk.dev/docs/keymaps" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">Layers</a>,{' '}
                     <a href="https://zmk.dev/docs/keymaps/combos" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">combos</a>,{' '}
                     <a href="https://zmk.dev/docs/keymaps/behaviors/hold-tap" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">dual-role keys</a>, and{' '}
                     <a href="https://zmk.dev/docs/keymaps/behaviors/macros" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">macros</a>{' '}are all supported.
@@ -40,7 +40,7 @@ const WhatToolDoes = () => {
               
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
-                <div>
+                <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">Keeps your ZMK logic intact</h3>
                   <p className="text-keyboard-text/70 mt-1">
                     No need to manually recreate your layout—everything is preserved.
@@ -50,7 +50,7 @@ const WhatToolDoes = () => {
               
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
-                <div>
+                <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">Accepts files from Nick's Keymap Editor</h3>
                   <p className="text-keyboard-text/70 mt-1">
                     Directly use exports from the visual GUI.
@@ -60,7 +60,7 @@ const WhatToolDoes = () => {
               
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
-                <div>
+                <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">Works with Kanata's live reload</h3>
                   <p className="text-keyboard-text/70 mt-1">
                     Instantly test changes—no firmware flashing required.
@@ -70,10 +70,8 @@ const WhatToolDoes = () => {
             </ul>
             
             <div className="mt-12 text-center">
-              <div className="flex items-center justify-center mb-8">
-                <div className="bg-keyboard-primary/10 text-keyboard-primary font-semibold px-4 py-2 rounded-lg">
-                  Edit your firmware layout → Convert to Kanata → Use it instantly on macOS or Linux
-                </div>
+              <div className="bg-keyboard-primary/10 text-keyboard-primary font-semibold px-4 py-2 rounded-lg inline-block mb-8">
+                Edit your firmware layout → Convert to Kanata → Use it instantly on macOS or Linux
               </div>
               
               <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-8 py-6 text-lg">
