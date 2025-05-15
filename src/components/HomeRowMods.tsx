@@ -86,7 +86,7 @@ const HomeRowMods = () => {
       return (
         <div 
           key={`${rowIndex}-${keyIndex}`}
-          className={`key col-span-1 ${isPressed ? 'bg-keyboard-primary/30 transform scale-95' : ''}`}
+          className={`key col-span-1 ${isPressed ? 'bg-keyboard-primary/30 transform scale-95' : ''} cursor-pointer`}
           onMouseDown={() => handleKeyDown(keyData, null)}
           onMouseUp={() => handleKeyUp(keyData)}
           onMouseLeave={() => isPressed && handleKeyUp(keyData)}
@@ -142,7 +142,7 @@ const HomeRowMods = () => {
                     </p>
                   </div>
                   
-                  <div className="grid grid-cols-10 gap-2 mb-8" onMouseLeave={handleMouseLeave}>
+                  <div className="keyboard-container grid grid-cols-10 gap-2 mb-8" onMouseLeave={handleMouseLeave}>
                     {/* Keyboard Illustration */}
                     <div className="col-span-10 text-center mb-2">
                       <span className="text-sm text-keyboard-text/60">Interactive QWERTY Layout with Home Row Mods</span>
@@ -225,6 +225,13 @@ const HomeRowMods = () => {
           </div>
         </div>
       </div>
+
+      {/* Custom cursor styles */}
+      <style jsx global>{`
+        .keyboard-container .key {
+          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;'><text y='50%' x='10%' dominant-baseline='middle' text-anchor='middle' font-size='40'>👆</text></svg>") 20 0, auto;
+        }
+      `}</style>
     </section>
   );
 };
