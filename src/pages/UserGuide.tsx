@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Info, Terminal, Code, Keyboard, Github, CheckCircle, Copy } from "lucide-react";
@@ -397,7 +398,7 @@ const UserGuide = () => {
   f_sft (tap-hold-release 200 f lsft)
   j_sft (tap-hold-release 200 j rsft)
   k_ctl (tap-hold-release 200 k rctl)
-  l_alt (tap-hold-release 200 l ralt)
+  l_alt (tap-hold-release 200 l lalt)
   semi_met (tap-hold-release 200 ; rmet)
   spc_fn (tap-hold-release 200 spc (layer-toggle fn))
 )`}
