@@ -27,14 +27,14 @@ const keyboards = [
 
 const WhatIsZMK = () => {
   return (
-    <section id="what-is-zmk" className="py-10 bg-keyboard-dark/80">
+    <section id="what-is-zmk" className="py-16 bg-keyboard-dark/80">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Removed the "What is ZMK?" headline */}
           
           {/* ZMK Section - Matching the other sections visual template */}
-          <div className="glass-card p-8 mb-8">
-            <div className="flex flex-col md:flex-row gap-6 items-center">
+          <div className="glass-card p-8 mb-12">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3 flex justify-center">
                 <img 
                   src="https://www.zephyrproject.org/wp-content/uploads/2021/09/zmk_logo.svg" 
