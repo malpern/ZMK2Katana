@@ -409,7 +409,7 @@ const UserGuide = () => {
                 <div className="glass-card p-4 border border-white/5">
                   <h4 className="font-semibold mb-2">Unicode Input</h4>
                   <p className="text-sm text-keyboard-text/70">
-                    Test Unicode character input to ensure the binding works correctly.
+                    Test Unicode character binding to ensure it works correctly.
                   </p>
                 </div>
               </div>
@@ -610,3 +610,4 @@ const UserGuide = () => {
 };
 
 export default UserGuide;
+
