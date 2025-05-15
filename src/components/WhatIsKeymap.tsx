@@ -19,11 +19,18 @@ const WhatIsKeymap = () => {
           <div className="glass-card p-8 mb-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3 relative h-full">
-                <img 
-                  src="/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png" 
-                  alt="Nick's Keymap Editor Screenshot" 
-                  className="rounded-lg shadow-xl border border-white/10 w-full object-cover object-left h-64"
-                />
+                <a 
+                  href="https://nickcoutsos.github.io/keymap-editor/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png" 
+                    alt="Nick's Keymap Editor Screenshot" 
+                    className="rounded-lg shadow-xl border border-white/10 w-full object-cover object-left h-64"
+                  />
+                </a>
                 {/* Nick's photo overlapping bottom left corner */}
                 <Avatar className="absolute -bottom-4 -left-4 h-16 w-16 border-4 border-keyboard-dark shadow-lg">
                   <AvatarImage src="https://nickcoutsos.github.io/assets/jpg/photo.jpg" alt="Nick Coutsos" />
@@ -64,11 +71,18 @@ const WhatIsKeymap = () => {
           <div className="glass-card p-8">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3 flex justify-center">
-                <img 
-                  src="https://raw.githubusercontent.com/jtroo/kanata/main/assets/kanata-icon.svg" 
-                  alt="Kanata Logo" 
-                  className="w-48 h-48"
-                />
+                <a 
+                  href="https://github.com/jtroo/kanata" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="https://raw.githubusercontent.com/jtroo/kanata/main/assets/kanata-icon.svg" 
+                    alt="Kanata Logo" 
+                    className="w-48 h-48"
+                  />
+                </a>
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">

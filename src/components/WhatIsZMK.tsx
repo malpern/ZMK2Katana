@@ -36,11 +36,18 @@ const WhatIsZMK = () => {
           <div className="glass-card p-8 mb-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3 flex justify-center">
-                <img 
-                  src="https://www.zephyrproject.org/wp-content/uploads/2021/09/zmk_logo.svg" 
-                  alt="ZMK Logo" 
-                  className="w-48 h-48"
-                />
+                <a 
+                  href="https://zmk.dev" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="https://www.zephyrproject.org/wp-content/uploads/2021/09/zmk_logo.svg" 
+                    alt="ZMK Logo" 
+                    className="w-48 h-48"
+                  />
+                </a>
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">
@@ -105,11 +112,17 @@ const WhatIsZMK = () => {
           <div className="glass-card p-8">
             <h3 className="text-2xl font-bold mb-4 text-center">...now you can get the same power using your basic mac keyboard</h3>
             <div className="overflow-hidden rounded-lg">
-              <img 
-                src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK73?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=d0dMVFphZTh2YTQyb0pHekNNbjdSZ2tuVHYzMERCZURia3c5SzJFOTlPanVCdEVHeHhPSGNpL2MzN05PekJuUXJoN1hCTUVacmhJZEQrWXRXUTNKUUE" 
-                alt="Apple Magic Keyboard" 
-                className="w-full h-64 object-cover object-center transform hover:scale-105 transition-transform duration-500"
-              />
+              <a 
+                href="https://www.apple.com/shop/product/MK2A3LL/A/magic-keyboard-us-english" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img 
+                  src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK73?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=d0dMVFphZTh2YTQyb0pHekNNbjdSZ2tuVHYzMERCZURia3c5SzJFOTlPanVCdEVHeHhPSGNpL2MzN05PekJuUXJoN1hCTUVacmhJZEQrWXRXUTNKUUE" 
+                  alt="Apple Magic Keyboard" 
+                  className="w-full h-64 object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                />
+              </a>
             </div>
           </div>
         </div>
