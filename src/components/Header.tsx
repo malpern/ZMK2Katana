@@ -1,0 +1,104 @@
+
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Code, Menu, X } from "lucide-react";
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-keyboard-dark/80 backdrop-blur-md border-b border-white/10">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <Code className="h-6 w-6 text-keyboard-primary" />
+            <span className="font-display font-bold text-lg tracking-tight">ZMK2Kanata</span>
+          </div>
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <a href="#features" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
+              Features
+            </a>
+            <a href="#why" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
+              Why It Matters
+            </a>
+            <a href="#howitworks" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
+              How It Works
+            </a>
+            <a href="#roadmap" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
+              Roadmap
+            </a>
+          </nav>
+          
+          <div className="hidden md:flex items-center space-x-4">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
+              GitHub
+            </a>
+            <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-white">
+              Get Updates
+            </Button>
+          </div>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-keyboard-text hover:text-keyboard-primary"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+      </div>
+      
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-keyboard-dark border-t border-white/10 py-4">
+          <div className="container mx-auto px-4 flex flex-col space-y-4">
+            <a 
+              href="#features" 
+              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a 
+              href="#why" 
+              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Why It Matters
+            </a>
+            <a 
+              href="#howitworks" 
+              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              How It Works
+            </a>
+            <a 
+              href="#roadmap" 
+              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Roadmap
+            </a>
+            <a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              GitHub
+            </a>
+            <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-white w-full">
+              Get Updates
+            </Button>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Header;

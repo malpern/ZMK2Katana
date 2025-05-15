@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 262.1 83.3% 57.8%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 220 100% 53%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 260 100% 66%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -61,7 +57,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 262.1 83.3% 57.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -70,7 +66,7 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 260 100% 66%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -96,6 +92,88 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-keyboard-dark text-keyboard-text font-sans;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  code {
+    @apply font-mono text-keyboard-highlight;
+  }
+
+  /* For the typed animation */
+  .typing-container {
+    @apply inline-block;
+  }
+
+  .typing-text {
+    @apply font-mono overflow-hidden whitespace-nowrap border-r-4 pr-1;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  /* Keyboard key styling */
+  .key {
+    @apply bg-keyboard-keycap text-keyboard-text rounded-md px-2 py-1 inline-flex items-center justify-center font-mono text-sm border border-gray-700 shadow-md;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-keyboard-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-keyboard-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-keyboard-accent;
+  }
+}
+
+/* Hero section background with glow effect */
+.hero-bg {
+  background: radial-gradient(circle at top center, rgba(124, 58, 237, 0.1) 0%, rgba(0, 0, 0, 0) 70%),
+              radial-gradient(circle at bottom left, rgba(43, 74, 237, 0.1) 0%, rgba(0, 0, 0, 0) 70%),
+              linear-gradient(180deg, #151823 0%, #1A1F32 100%);
+}
+
+/* Custom animation for float effect on keyboard elements */
+.float-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glass card effect */
+.glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-xl;
+}
+
+/* Gradient code blocks */
+.code-block {
+  @apply bg-gradient-to-br from-keyboard-dark to-gray-900 rounded-lg p-4 font-mono text-sm border border-gray-700;
+}
+
+/* Typed cursor effect */
+.typing-cursor {
+  @apply border-r-2 animate-blink;
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, #7C3AED, #2563EB);
+  padding: 1px;
+}
+
+.gradient-border > div {
+  background: #151823;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
 }
