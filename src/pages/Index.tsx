@@ -13,6 +13,7 @@ import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import WhatIsZMK from '../components/WhatIsZMK';
 import HomeRowMods from '../components/HomeRowMods';
+import MacEnhancementGrid from '../components/MacEnhancementGrid';
 
 const Index = () => {
   // Smooth scroll to anchor links
@@ -59,6 +60,7 @@ const Index = () => {
         <WhyItMatters />
         <HowItWorks />
         <Roadmap />
+        <MacEnhancementGrid />
         <Newsletter />
       </main>
       <Footer />
