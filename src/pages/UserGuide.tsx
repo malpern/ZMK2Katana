@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Info, Terminal, Code, Keyboard, Github, CheckCircle, Copy } from "lucide-react";
@@ -425,7 +424,7 @@ const UserGuide = () => {
                         ==> Downloading https://github.com/jtroo/kanata/releases/download/v1.2.3/kanata-macos-universal<br />
                         ==> Downloading from https://objects.githubusercontent.com/github-production-release...<br />
                         ######################################################################## 100.0%<br />
-                        ==> Installing kanata<br />
+                        {'==>'} Installing kanata<br />
                         🍺 /usr/local/Cellar/kanata/1.2.3: 5 files, 15.2MB, built in 3 seconds
                       </p>
                       <p className="text-green-500 mb-1">$ mkdir -p ~/.config/kanata</p>
