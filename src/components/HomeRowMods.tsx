@@ -123,7 +123,7 @@ const HomeRowMods = () => {
     <section id="home-row-mods" className="py-16 bg-keyboard-dark/80">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-block bg-keyboard-primary/10 px-4 py-1.5 rounded-full mb-6">
+          <div className="inline-block bg-keyboard-primary/10 px-4 py-1.5 rounded-full mb-6 text-center mx-auto">
             <span className="text-keyboard-primary text-sm font-medium">Mac Users Guide</span>
           </div>
           

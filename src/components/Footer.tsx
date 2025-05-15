@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Code, Github, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -27,25 +26,6 @@ const Footer = () => {
               className="text-keyboard-text/70 hover:text-keyboard-primary transition-colors"
             >
               GitHub
-            </a>
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <a 
-              href="https://github.com/malpern/zmk-to-kanata" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
-            >
-              <Github className="h-5 w-5 text-keyboard-text/70" />
-            </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
-            >
-              <Twitter className="h-5 w-5 text-keyboard-text/70" />
             </a>
           </div>
         </div>
