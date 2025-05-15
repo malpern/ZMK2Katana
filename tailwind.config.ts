@@ -132,7 +132,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-gentle': 'pulse-gentle 3s ease-in-out infinite',
-				'typing': 'typing 3.5s steps(40, end), blink 0.75s step-end infinite'
+				'typing': 'typing 3.5s steps(40, end), blink 0.75s step-end infinite',
+				'blink': 'blink 0.75s step-end infinite'
 			},
 			backgroundImage: {
 				'keyboard-gradient': 'linear-gradient(135deg, #151823 0%, #1E293B 100%)',
