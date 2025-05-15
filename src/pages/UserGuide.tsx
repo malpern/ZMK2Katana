@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Info, Terminal, Code, Keyboard, Github, CheckCircle, Copy } from "lucide-react";
+import { ArrowLeft, ArrowRight, Info, Terminal, Code, Keyboard, Github, CheckCircle, Copy } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
