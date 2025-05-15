@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-keyboard-text/80 mb-10 leading-relaxed">
-            Convert ZMK firmware configs into Kanata-powered desktop remaps. Test, tweak, and run instantly on your everyday keyboard.
+            Make your existing keyboard as powerful as a custom mechanical <span className="font-semibold">without</span> having to edit and flash firmware, with this ZMK to Kanata converter.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

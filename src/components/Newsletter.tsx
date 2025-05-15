@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Github, Star, BookOpen } from "lucide-react";
@@ -35,8 +34,7 @@ const Newsletter = () => {
               
               <Link to="/user-guide">
                 <Button 
-                  variant="outline"
-                  className="border-keyboard-text/20 text-keyboard-text hover:bg-white/5 h-12 px-8 flex items-center gap-2 w-full"
+                  className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white h-12 px-8 flex items-center gap-2 w-full"
                 >
                   <BookOpen className="h-5 w-5" />
                   Read User Guide

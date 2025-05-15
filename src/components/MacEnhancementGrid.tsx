@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -48,9 +47,9 @@ const macTools = [
   },
   {
     name: 'Tiny Keyboard Shop',
-    description: 'Quality keyboard parts and accessories',
+    description: 'San Jose, CA — Quality keyboard parts and accessories',
     image: 'https://www.mercurynews.com/wp-content/uploads/2023/12/SJM-L-KEYBOARD-4.jpg?w=620',
-    url: 'https://www.tinykeyboard.shop/',
+    url: 'https://www.instagram.com/tinykeyboardshop/?hl=en',
     icon: 'shopping-cart'
   }
 ];

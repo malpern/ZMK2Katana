@@ -29,7 +29,10 @@ const WhatToolDoes = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-keyboard-text">Translates advanced keyboard features</h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    Layers, combos, dual-role keys, and macros are all supported.
+                    <a href="https://zmk.dev/docs/keymaps#layers" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">Layers</a>,{' '}
+                    <a href="https://zmk.dev/docs/keymaps/combos" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">combos</a>,{' '}
+                    <a href="https://zmk.dev/docs/keymaps/behaviors/hold-tap" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">dual-role keys</a>, and{' '}
+                    <a href="https://zmk.dev/docs/keymaps/behaviors/macros" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">macros</a>{' '}are all supported.
                   </p>
                 </div>
               </li>

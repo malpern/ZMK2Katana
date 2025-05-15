@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Code, Menu, X, Github } from "lucide-react";
@@ -21,6 +20,9 @@ const Header = () => {
             <a href="#features" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               Features
             </a>
+            <Link to="/user-guide" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
+              User Guide
+            </Link>
             <a href="#why" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               Why It Matters
             </a>
@@ -28,7 +30,7 @@ const Header = () => {
               How It Works
             </a>
             <a href="#mac-enhancements" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
-              Keyboard Superpowers
+              ⌨️ Superpowers
             </a>
           </nav>
           
@@ -66,6 +68,13 @@ const Header = () => {
             >
               Features
             </a>
+            <Link 
+              to="/user-guide" 
+              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              User Guide
+            </Link>
             <a 
               href="#why" 
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
@@ -85,7 +94,7 @@ const Header = () => {
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Keyboard Superpowers
+              ⌨️ Superpowers
             </a>
             <a 
               href="https://github.com/malpern/zmk-to-kanata" 
