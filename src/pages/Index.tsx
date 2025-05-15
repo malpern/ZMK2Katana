@@ -60,7 +60,9 @@ const Index = () => {
         <HomeRowMods />
         <WhyKanata />
         <MacEnhancementGrid />
+        {/* Roadmap section commented out
         <Roadmap />
+        */}
         <Newsletter />
       </main>
       <Footer />

@@ -26,9 +26,11 @@ const Header = () => {
             <a href="#howitworks" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               How It Works
             </a>
+            {/* Roadmap link removed
             <a href="#roadmap" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               Roadmap
             </a>
+            */}
             <a href="#mac-enhancements" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
               Keyboard Superpowers
             </a>
@@ -82,6 +84,7 @@ const Header = () => {
             >
               How It Works
             </a>
+            {/* Roadmap link removed
             <a 
               href="#roadmap" 
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
@@ -89,6 +92,7 @@ const Header = () => {
             >
               Roadmap
             </a>
+            */}
             <a 
               href="#mac-enhancements" 
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
