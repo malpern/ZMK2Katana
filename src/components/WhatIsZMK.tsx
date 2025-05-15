@@ -30,10 +30,6 @@ const WhatIsZMK = () => {
     <section id="what-is-zmk" className="py-16 bg-keyboard-dark/80">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-block bg-keyboard-primary/10 px-4 py-1.5 rounded-full mb-6">
-            <span className="text-keyboard-primary text-sm font-medium">The Firmware</span>
-          </div>
-          
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             What is ZMK?
           </h2>
@@ -50,7 +46,7 @@ const WhatIsZMK = () => {
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">
-                  The Next-Gen Keyboard Firmware
+                  Open Source Keyboard Firmware
                 </h3>
                 <p className="mb-4 text-keyboard-text/80 leading-relaxed">
                   ZMK Firmware is an open source keyboard firmware built on the Zephyr™ RTOS. It powers

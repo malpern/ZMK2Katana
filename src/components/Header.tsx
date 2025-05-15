@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Code, Menu, X } from "lucide-react";
+import { Code, Menu, X, Github } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,12 +35,16 @@ const Header = () => {
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors">
-              GitHub
+            <a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-white flex items-center gap-2">
+                <Github className="h-4 w-4" />
+                GitHub
+              </Button>
             </a>
-            <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-white">
-              Get Updates
-            </Button>
           </div>
           
           {/* Mobile Menu Button */}
@@ -96,14 +100,12 @@ const Header = () => {
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
+              className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white py-2 px-4 rounded flex items-center justify-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
+              <Github className="h-5 w-5" />
               GitHub
             </a>
-            <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-white w-full">
-              Get Updates
-            </Button>
           </div>
         </div>
       )}
