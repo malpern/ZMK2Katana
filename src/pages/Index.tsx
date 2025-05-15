@@ -2,6 +2,9 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import WhatIsKeymap from '../components/WhatIsKeymap';
+import WhyKanata from '../components/WhyKanata';
+import WhatToolDoes from '../components/WhatToolDoes';
 import Features from '../components/Features';
 import WhyItMatters from '../components/WhyItMatters';
 import HowItWorks from '../components/HowItWorks';
@@ -45,6 +48,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <WhatIsKeymap />
+        <WhyKanata />
+        <WhatToolDoes />
         <Features />
         <WhyItMatters />
         <HowItWorks />
