@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Command, Option } from 'lucide-react';
 
@@ -226,12 +225,14 @@ const HomeRowMods = () => {
         </div>
       </div>
 
-      {/* Custom cursor styles */}
-      <style jsx global>{`
+      {/* Custom cursor styles - Fixed by removing jsx and global props */}
+      <style>
+        {`
         .keyboard-container .key {
-          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;'><text y='50%' x='10%' dominant-baseline='middle' text-anchor='middle' font-size='40'>👆</text></svg>") 20 0, auto;
+          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='120' viewport='0 0 100 100' style='fill:black;'><text y='50%' x='10%' dominant-baseline='middle' text-anchor='middle' font-size='100'>👆</text></svg>") 50 0, auto;
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
