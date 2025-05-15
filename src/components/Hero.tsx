@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Keyboard } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -38,6 +38,57 @@ const Hero = () => {
               alt="Zoomed in MacBook keyboard" 
               className="rounded-xl w-full max-w-2xl mx-auto shadow-2xl border border-white/10 float-element"
             />
+          </div>
+          
+          {/* Nick's Keymap Editor + Kanata Section */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Nick's Keymap Editor */}
+            <div className="glass-card overflow-hidden flex flex-col">
+              <div className="bg-gray-900 px-4 py-2 border-b border-gray-700 flex items-center">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div className="ml-4 text-xs text-gray-400">Nick's Keymap Editor</div>
+              </div>
+              <div className="p-4 flex-1 flex flex-col">
+                <img 
+                  src="https://raw.githubusercontent.com/nickcoutsos/keymap-editor/main/docs/screenshot-dark.png" 
+                  alt="Nick's Keymap Editor Screenshot" 
+                  className="rounded border border-gray-700 shadow-lg mb-4"
+                />
+                <div className="text-left">
+                  <h3 className="text-lg font-bold text-keyboard-text mb-2">Step 1: Create your ZMK keymap</h3>
+                  <p className="text-sm text-keyboard-text/80">Design your custom keyboard layout in <a href="https://nickcoutsos.github.io/keymap-editor/" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">Nick's Keymap Editor</a>, the visual editor for ZMK-powered keyboards.</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Kanata */}
+            <div className="glass-card overflow-hidden flex flex-col">
+              <div className="bg-gray-900 px-4 py-2 border-b border-gray-700 flex items-center">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <div className="ml-4 text-xs text-gray-400">Kanata</div>
+              </div>
+              <div className="p-4 flex-1 flex flex-col">
+                <div className="flex items-center justify-center flex-1 mb-4">
+                  <img 
+                    src="https://raw.githubusercontent.com/jtroo/kanata/main/assets/kanata-icon.svg" 
+                    alt="Kanata Logo" 
+                    className="h-32 w-32"
+                  />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-bold text-keyboard-text mb-2">Step 2: Run it on your Mac with Kanata</h3>
+                  <p className="text-sm text-keyboard-text/80">Convert your ZMK configuration to <a href="https://github.com/jtroo/kanata" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary hover:underline">Kanata</a>, the powerful keyboard customization tool that brings your favorite firmware features to macOS.</p>
+                </div>
+              </div>
+            </div>
           </div>
           
           {/* Code Preview */}
