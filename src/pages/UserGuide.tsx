@@ -4,11 +4,99 @@ import { ArrowLeft, ArrowRight, Info, Terminal, Code, Keyboard, Github, CheckCir
 import { Link } from "react-router-dom";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const UserGuide = () => {
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   };
+
+  // ZMK Example code
+  const zmkExample = `/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
+    
+    keymap {
+        compatible = "zmk,keymap";
+        
+        default_layer {
+            bindings = <
+                &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P
+                &mt LCTRL A &mt LALT S  &mt LSHFT D &mt LGUI F  &kp G       &kp H       &mt RGUI J  &mt RSHFT K &mt RALT L  &mt RCTRL SEMI
+                &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH
+                                        &lt 1 TAB   &kp SPACE   &kp ENTER   &lt 2 BSPC
+            >;
+        };
+        
+        lower_layer {
+            bindings = <
+                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+                &kp LCTRL   &kp LALT    &kp LSHFT   &kp LGUI    &trans      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans
+                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                                        &trans      &trans      &trans      &trans
+            >;
+        };
+        
+        raise_layer {
+            bindings = <
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR    &kp RPAR
+                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                                        &trans      &trans      &trans      &trans
+            >;
+        };
+    };
+};`;
+
+  // Kanata Example code
+  const kanataExample = `(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \\
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer base
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \\
+  @esc_ctrl @a_met @s_alt @d_ctl @f_sft g    h    @j_sft @k_ctl @l_alt @semi_met '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           @spc_fn         ralt rmet rctl
+)
+
+(deflayer fn
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    left down up   rght _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _
+)
+
+(defalias
+  esc_ctrl (tap-hold-release 200 esc lctl)
+  a_met (tap-hold-release 200 a lmet)
+  s_alt (tap-hold-release 200 s lalt)
+  d_ctl (tap-hold-release 200 d lctl)
+  f_sft (tap-hold-release 200 f lsft)
+  j_sft (tap-hold-release 200 j rsft)
+  k_ctl (tap-hold-release 200 k rctl)
+  l_alt (tap-hold-release 200 l ralt)
+  semi_met (tap-hold-release 200 ; rmet)
+  spc_fn (tap-hold-release 200 spc (layer-toggle fn))
+)`;
 
   return (
     <div className="flex flex-col min-h-screen bg-keyboard-dark text-keyboard-text antialiased">
@@ -168,10 +256,65 @@ const UserGuide = () => {
                 </code>
               </div>
               
-              <h3 className="text-xl font-semibold mb-4">Verify the Output File</h3>
-              <p className="text-keyboard-text/80 mb-4">
-                After conversion, check that your output file contains the expected Kanata configuration:
+              <h3 className="text-xl font-semibold mb-4">Code Examples</h3>
+              <p className="text-keyboard-text/80 mb-6">
+                Below you can see examples of both ZMK and Kanata configuration files for the same keyboard layout:
               </p>
+              
+              <div className="rounded-lg overflow-hidden border border-white/10 mb-8">
+                <Tabs defaultValue="zmk">
+                  <TabsList className="w-full bg-gray-900/80 p-0 h-12 rounded-t-lg border-b border-white/10">
+                    <TabsTrigger value="zmk" className="flex-1 h-full data-[state=active]:bg-black/40">ZMK Configuration</TabsTrigger>
+                    <TabsTrigger value="kanata" className="flex-1 h-full data-[state=active]:bg-black/40">Kanata Configuration</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="zmk" className="m-0">
+                    <div className="relative group">
+                      <button 
+                        className="absolute top-2 right-2 bg-keyboard-dark/50 p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                        onClick={() => copyToClipboard(zmkExample)}
+                      >
+                        <Copy className="h-4 w-4 text-keyboard-text/70 hover:text-keyboard-text" />
+                      </button>
+                      <SyntaxHighlighter 
+                        language="c" 
+                        style={atomDark} 
+                        showLineNumbers
+                        customStyle={{
+                          margin: 0,
+                          borderRadius: 0,
+                          fontSize: '0.9rem',
+                          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        }}
+                      >
+                        {zmkExample}
+                      </SyntaxHighlighter>
+                    </div>
+                  </TabsContent>
+                  <TabsContent value="kanata" className="m-0">
+                    <div className="relative group">
+                      <button 
+                        className="absolute top-2 right-2 bg-keyboard-dark/50 p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity z-10"
+                        onClick={() => copyToClipboard(kanataExample)}
+                      >
+                        <Copy className="h-4 w-4 text-keyboard-text/70 hover:text-keyboard-text" />
+                      </button>
+                      <SyntaxHighlighter 
+                        language="lisp" 
+                        style={atomDark} 
+                        showLineNumbers
+                        customStyle={{
+                          margin: 0,
+                          borderRadius: 0,
+                          fontSize: '0.9rem',
+                          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        }}
+                      >
+                        {kanataExample}
+                      </SyntaxHighlighter>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="glass-card p-4 border border-white/5">
