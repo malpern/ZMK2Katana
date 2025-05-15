@@ -44,7 +44,7 @@ const WhatIsZMK = () => {
               </div>
               <div className="md:w-2/3">
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">
-                  Open Source Keyboard Firmware
+                  What is ZMK?
                 </h3>
                 <p className="mb-4 text-keyboard-text/80 leading-relaxed">
                   ZMK Firmware is an open source keyboard firmware built on the Zephyr™ RTOS. It powers
