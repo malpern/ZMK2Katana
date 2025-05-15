@@ -5,7 +5,7 @@ import { ExternalLink } from 'lucide-react';
 const keyboards = [
   {
     name: "Corne Keyboard",
-    image: "https://cdn.shopify.com/s/files/1/0227/9171/6941/files/PXL_20230321_122459080_a2e70b89-2e76-4a2f-9f50-e96ac56e6708_900x.jpg",
+    image: "/lovable-uploads/d297019f-86e6-4cc0-bbca-fd86db385dc9.png",
     url: "https://typeractive.xyz"
   },
   {
@@ -15,7 +15,7 @@ const keyboards = [
   },
   {
     name: "Lily58",
-    image: "https://cdn.shopify.com/s/files/1/0599/3460/5491/files/Lily58-Pro-Split-Keyboard-Kit-Keycaps-min.jpg",
+    image: "/lovable-uploads/7928c1b7-2d65-4b21-901c-a12328629431.png",
     url: "https://typeractive.xyz"
   },
   {
@@ -43,7 +43,7 @@ const WhatIsZMK = () => {
               <div className="bg-gray-900/80 p-6 rounded-lg border border-white/10 backdrop-blur-sm h-full">
                 <div className="flex justify-center mb-6">
                   <img 
-                    src="https://www.zephyrproject.org/wp-content/uploads/2021/09/zmk_logo.svg" 
+                    src="https://zmk.dev/img/zmk-logo-light.svg" 
                     alt="ZMK Logo" 
                     className="h-24"
                   />

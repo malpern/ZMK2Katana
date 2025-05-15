@@ -53,8 +53,8 @@ const Index = () => {
         <WhatToolDoes />
         <WhatIsKeymap />
         <WhatIsZMK />
-        <WhyKanata />
         <HomeRowMods />
+        <WhyKanata />
         <Features />
         <WhyItMatters />
         <HowItWorks />
