@@ -18,6 +18,13 @@ const macTools = [
     icon: 'key'
   },
   {
+    name: 'Homerow',
+    description: 'Keyboard-driven UI navigation for macOS. Reduce your dependency on the mouse.',
+    image: 'https://www.homerow.app/_next/image?url=%2Fapp-icon.png&w=640&q=100',
+    url: 'https://www.homerow.app/',
+    icon: 'keyboard'
+  },
+  {
     name: 'Keyboard Maestro',
     description: 'Powerful macro tool for automating your daily tasks',
     image: 'https://www.keyboardmaestro.com/img/v11/overview-dark@2x.png',
