@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Twitter, Linkedin } from 'lucide-react';
+import { Twitter, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const WhoMadeThis = () => {
@@ -21,13 +21,17 @@ const WhoMadeThis = () => {
               <div className="shrink-0">
                 <img 
                   src="https://pbs.twimg.com/profile_images/1262747756457652225/Fazb0lNd_400x400.jpg" 
-                  alt="Mike Alpern" 
+                  alt="Micah Alpern" 
                   className="w-40 h-40 rounded-full border-4 border-keyboard-primary/30 shadow-lg shadow-keyboard-primary/20"
                 />
               </div>
               
               <div className="text-left space-y-4">
-                <h3 className="text-2xl font-semibold text-center md:text-left">Mike Alpern</h3>
+                <h3 className="text-2xl font-semibold text-center md:text-left">Micah Alpern</h3>
+                
+                <p className="text-keyboard-text/70 italic mb-2">
+                  Enjoyer of custom mechanical keyboards, design, and making
+                </p>
                 
                 <p className="text-keyboard-text/80 leading-relaxed">
                   Design & Product. Chief Product Officer at SmirkHealth, Prev Sr Director 
@@ -36,6 +40,16 @@ const WhoMadeThis = () => {
                 </p>
                 
                 <div className="flex items-center justify-center md:justify-start space-x-4 pt-2">
+                  <a 
+                    href="https://github.com/malpern" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-5 w-5 text-keyboard-text" />
+                  </a>
+                  
                   <a 
                     href="https://x.com/malpern" 
                     target="_blank" 

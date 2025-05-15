@@ -54,12 +54,14 @@ const Footer = () => {
           <p className="text-sm text-keyboard-text/50 mb-2 md:mb-0">
             &copy; {new Date().getFullYear()} ZMK2Kanata Project. All rights reserved.
           </p>
-          <div className="flex items-center justify-center md:justify-end space-x-6">
-            <a href="#" className="text-sm text-keyboard-text/50 hover:text-keyboard-text/70 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-keyboard-text/50 hover:text-keyboard-text/70 transition-colors">
-              Terms of Service
+          <div className="flex items-center justify-center md:justify-end">
+            <a 
+              href="https://github.com/malpern/zmk-to-kanata" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-keyboard-text/50 hover:text-keyboard-text/70 transition-colors"
+            >
+              This project is open source and released under the MIT license
             </a>
           </div>
         </div>
