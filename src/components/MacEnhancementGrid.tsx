@@ -7,7 +7,7 @@ const macTools = [
   {
     name: 'Raycast',
     description: 'Powerful launcher that lets you control your tools with a few keystrokes',
-    image: 'https://assets.raycast.com/images/social.png',
+    image: 'https://upload.wikimedia.org/wikipedia/en/f/f4/Raycast_App_Icon.png',
     url: 'https://www.raycast.com/',
     icon: 'mouse-pointer'
   },
@@ -28,7 +28,7 @@ const macTools = [
   {
     name: 'Karabiner Elements',
     description: 'A powerful keyboard customizer for macOS',
-    image: 'https://karabiner-elements.pqrs.org/images/karabiner-elements-screenshot.png',
+    image: 'https://karabiner-elements.pqrs.org/images/logo.png',
     url: 'https://karabiner-elements.pqrs.org/',
     icon: 'settings'
   },
@@ -42,14 +42,14 @@ const macTools = [
   {
     name: 'Mode Design',
     description: 'Premium keyboards designed to enhance your typing experience',
-    image: 'https://cdn.shopify.com/s/files/1/0223/5322/1338/files/Sonnet-Mid-Silver-Clear_2048x2048.jpg',
+    image: 'https://modedesigns.com/cdn/shop/files/sixtyfive-2024-stacked-header.jpg?v=1722901512&width=1540',
     url: 'https://shop.modedesigns.com/',
     icon: 'layout-grid'
   },
   {
     name: 'Tiny Keyboard Shop',
     description: 'Quality keyboard parts and accessories',
-    image: 'https://cdn.shopify.com/s/files/1/0599/3460/5491/files/tiny-logo.png',
+    image: 'https://www.mercurynews.com/wp-content/uploads/2023/12/SJM-L-KEYBOARD-4.jpg?w=620',
     url: 'https://www.tinykeyboard.shop/',
     icon: 'shopping-cart'
   }

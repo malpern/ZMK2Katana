@@ -20,7 +20,7 @@ const keyboards = [
   },
   {
     name: "Dactyl Manuform",
-    image: "https://tuxtower.net/blog/img/dactylmanuform.jpg",
+    image: "https://tuxtower.net/processed_images/dactylplaceholder.b6e998bacdab5abd.jpg",
     url: "https://tuxtower.net/blog/dactylmanuform/"
   }
 ];
