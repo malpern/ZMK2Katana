@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Zap, CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -18,9 +17,9 @@ const WhatToolDoes = () => {
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-keyboard-text">Converts ZMK (DTS or JSON) keymaps into Kanata configs</h3>
+                  <h3 className="text-xl font-semibold text-keyboard-text">Converts ZMK keymaps to Kanata configs</h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    Our converter takes your ZMK configuration files (either raw DTS or JSON from the editor) and transforms them into ready-to-use Kanata configuration files.
+                    Upload your ZMK (DTS or JSON) files and get Kanata-ready configs.
                   </p>
                 </div>
               </li>
@@ -28,9 +27,9 @@ const WhatToolDoes = () => {
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-keyboard-text">Translates layers, combos, dual-role keys, macros, and more</h3>
+                  <h3 className="text-xl font-semibold text-keyboard-text">Translates advanced keyboard features</h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    All the advanced keyboard behaviors you've configured in ZMK—from complex layer systems to time-based key behaviors—are accurately translated to their Kanata equivalents.
+                    Layers, combos, dual-role keys, and macros are all supported.
                   </p>
                 </div>
               </li>
@@ -38,9 +37,9 @@ const WhatToolDoes = () => {
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-keyboard-text">Preserves ZMK logic structure—no remapping by hand</h3>
+                  <h3 className="text-xl font-semibold text-keyboard-text">Keeps your ZMK logic intact</h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    Instead of manually recreating your keyboard's behavior, our tool preserves the exact logic structure you've designed in ZMK, saving countless hours of tedious work.
+                    No need to manually recreate your layout—everything is preserved.
                   </p>
                 </div>
               </li>
@@ -48,9 +47,9 @@ const WhatToolDoes = () => {
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-keyboard-text">Works with files exported from the Nick Coutsos GUI</h3>
+                  <h3 className="text-xl font-semibold text-keyboard-text">Accepts files from Nick's Keymap Editor</h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    If you've designed your keymap using Nick's Keymap Editor, our tool seamlessly accepts those exported files, making the process completely visual from start to finish.
+                    Directly use exports from the visual GUI.
                   </p>
                 </div>
               </li>
@@ -58,9 +57,9 @@ const WhatToolDoes = () => {
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold text-keyboard-text">Pairs with Kanata's live reload system—no flashing needed</h3>
+                  <h3 className="text-xl font-semibold text-keyboard-text">Works with Kanata's live reload</h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    With Kanata's live reload capability, you can test changes instantly without the time-consuming process of flashing firmware to your keyboard hardware.
+                    Instantly test changes—no firmware flashing required.
                   </p>
                 </div>
               </li>
