@@ -79,8 +79,8 @@ const WhatIsZMK = () => {
             </div>
           </div>
           
-          <h3 className="text-2xl font-bold mb-6 text-center">Popular ZMK-Powered Keyboards</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <h3 className="text-2xl font-bold mb-6 text-center">Popular ZMK-Powered Custom Mechanical Keyboards</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {keyboards.map((keyboard, index) => (
               <a 
                 key={index}
@@ -106,6 +106,17 @@ const WhatIsZMK = () => {
                 </div>
               </a>
             ))}
+          </div>
+          
+          <div className="glass-card p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">...now you can get the same power using your basic mac keyboard</h3>
+            <div className="overflow-hidden rounded-lg">
+              <img 
+                src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXK73?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=d0dMVFphZTh2YTQyb0pHekNNbjdSZ2tuVHYzMERCZURia3c5SzJFOTlPanVCdEVHeHhPSGNpL2MzN05PekJuUXJoN1hCTUVacmhJZEQrWXRXUTNKUUE" 
+                alt="Apple Magic Keyboard" 
+                className="w-full h-64 object-cover object-center transform hover:scale-105 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
       </div>
