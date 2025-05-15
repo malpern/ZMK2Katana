@@ -13,20 +13,25 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center space-x-6 mb-6 md:mb-0">
-            <a href="#" className="text-keyboard-text/70 hover:text-keyboard-primary transition-colors">
+            <a href="#features" className="text-keyboard-text/70 hover:text-keyboard-primary transition-colors">
               Features
             </a>
-            <a href="#" className="text-keyboard-text/70 hover:text-keyboard-primary transition-colors">
+            <Link to="/user-guide" className="text-keyboard-text/70 hover:text-keyboard-primary transition-colors">
               Documentation
-            </a>
-            <a href="#" className="text-keyboard-text/70 hover:text-keyboard-primary transition-colors">
+            </Link>
+            <a 
+              href="https://github.com/malpern/zmk-to-kanata" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-keyboard-text/70 hover:text-keyboard-primary transition-colors"
+            >
               GitHub
             </a>
           </div>
           
           <div className="flex items-center space-x-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/malpern/zmk-to-kanata" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"

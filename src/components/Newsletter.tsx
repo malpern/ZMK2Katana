@@ -21,7 +21,7 @@ const Newsletter = () => {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/malpern/zmk-to-kanata" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

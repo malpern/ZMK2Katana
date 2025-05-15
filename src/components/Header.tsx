@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Code, Menu, X, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +39,7 @@ const Header = () => {
           
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/malpern/zmk-to-kanata" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -101,7 +102,7 @@ const Header = () => {
               Keyboard Superpowers
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/malpern/zmk-to-kanata" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white py-2 px-4 rounded flex items-center justify-center gap-2"

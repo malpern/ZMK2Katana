@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Keyboard, Github, BookOpen } from "lucide-react";
@@ -21,10 +22,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-8 py-6 text-lg w-full sm:w-auto flex items-center gap-2">
-              <Github className="h-5 w-5" />
-              View on GitHub
-            </Button>
+            <a href="https://github.com/malpern/zmk-to-kanata" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-white px-8 py-6 text-lg w-full sm:w-auto flex items-center gap-2">
+                <Github className="h-5 w-5" />
+                View on GitHub
+              </Button>
+            </a>
             <Link to="/user-guide">
               <Button variant="outline" className="border-keyboard-secondary text-keyboard-secondary hover:bg-keyboard-secondary/10 px-8 py-6 text-lg w-full sm:w-auto flex items-center gap-2">
                 <BookOpen className="h-5 w-5" />
@@ -41,8 +44,18 @@ const Hero = () => {
               alt="Zoomed in MacBook keyboard" 
               className="rounded-xl w-full max-w-2xl mx-auto shadow-2xl border border-white/10 float-element"
             />
-            <div className="absolute bottom-4 right-4 bg-black/70 px-3 py-1.5 rounded-full backdrop-blur-sm">
-              <span className="text-xs text-keyboard-text/90">Unlock Keyboard Superpowers</span>
+            
+            {/* Improved Keyboard Superpowers Indicator */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-xl backdrop-blur-sm">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="h-3 w-3 bg-keyboard-primary rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-keyboard-text/90">Keyboard Superpower</span>
+                </div>
+                <div className="text-xs bg-white/10 px-2 py-1 rounded-full text-keyboard-primary/90 backdrop-blur-sm border border-white/10">
+                  Home row mods • Layers • Tap dance • Combos
+                </div>
+              </div>
             </div>
           </div>
           
