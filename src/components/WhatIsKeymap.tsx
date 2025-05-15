@@ -4,14 +4,14 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const WhatIsKeymap = () => {
   return (
-    <section className="py-16 bg-keyboard-dark/80">
+    <section className="py-20 bg-keyboard-dark/80">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-keyboard-primary/10 px-4 py-1.5 rounded-full mb-6">
             <span className="text-keyboard-primary text-sm font-medium">The Tools You Need</span>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
             Understand the Ecosystem
           </h2>
           
@@ -47,7 +47,7 @@ const WhatIsKeymap = () => {
                   combos, and more.
                 </p>
                 <h4 className="text-xl font-semibold mb-2 text-keyboard-text">Why use it?</h4>
-                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-2">
+                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-2 text-left">
                   <li>Visual interface for configuring complex layouts</li>
                   <li>No need to write Device Tree Source (DTS) files manually</li>
                   <li>Export configurations to ZMK-ready format</li>
@@ -94,7 +94,7 @@ const WhatIsKeymap = () => {
                   keyboard behaviors without changing your keyboard's firmware.
                 </p>
                 <h4 className="text-xl font-semibold mb-2 text-keyboard-text">Key features:</h4>
-                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-2">
+                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-2 text-left">
                   <li>Live configuration changes without recompiling</li>
                   <li>Works with any keyboard, including built-in laptop keyboards</li>
                   <li>Sophisticated key behaviors (tap-hold, layers, combos)</li>

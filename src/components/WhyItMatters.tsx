@@ -5,7 +5,7 @@ const WhyItMatters = () => {
   return (
     <section id="why" className="py-20 bg-keyboard-dark">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block bg-keyboard-accent/10 px-4 py-1.5 rounded-full mb-6">
             <span className="text-keyboard-accent text-sm font-medium">Why It Matters</span>
           </div>

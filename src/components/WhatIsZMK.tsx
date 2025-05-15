@@ -27,12 +27,10 @@ const keyboards = [
 
 const WhatIsZMK = () => {
   return (
-    <section id="what-is-zmk" className="py-16 bg-keyboard-dark/80">
+    <section id="what-is-zmk" className="py-20 bg-keyboard-dark/80">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Removed the "What is ZMK?" headline */}
-          
-          {/* ZMK Section - Matching the other sections visual template */}
+        <div className="max-w-4xl mx-auto text-center">
+          {/* ZMK Section */}
           <div className="glass-card p-8 mb-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3 flex justify-center">
@@ -58,7 +56,7 @@ const WhatIsZMK = () => {
                   dozens of wireless, low-power split keyboards and offers state-of-the-art features.
                 </p>
                 <h4 className="text-xl font-semibold mb-2 text-keyboard-text">Key features:</h4>
-                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-1">
+                <ul className="list-disc pl-5 text-keyboard-text/80 space-y-1 text-left">
                   <li><span className="font-semibold">Wireless-First</span>: Built from the ground up for Bluetooth LE</li>
                   <li><span className="font-semibold">Power Efficient</span>: Designed for long battery life</li>
                   <li><span className="font-semibold">Powerful Behaviors</span>: Tap-dance, combos, and more</li>
@@ -80,8 +78,8 @@ const WhatIsZMK = () => {
             </div>
           </div>
           
-          <h3 className="text-2xl font-bold mb-4 text-center">Popular ZMK-Powered Custom Mechanical Keyboards</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <h3 className="text-2xl font-bold mb-8">Popular ZMK-Powered Custom Mechanical Keyboards</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {keyboards.map((keyboard, index) => (
               <a 
                 key={index}
@@ -110,7 +108,7 @@ const WhatIsZMK = () => {
           </div>
           
           <div className="glass-card p-8">
-            <h3 className="text-2xl font-bold mb-4 text-center">...now you can get the same power using your basic mac keyboard</h3>
+            <h3 className="text-2xl font-bold mb-4">...now you can get the same power using your basic mac keyboard</h3>
             <div className="overflow-hidden rounded-lg">
               <a 
                 href="https://www.apple.com/shop/product/MK2A3LL/A/magic-keyboard-us-english" 

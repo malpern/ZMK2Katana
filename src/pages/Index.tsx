@@ -52,17 +52,14 @@ const Index = () => {
       <main>
         <Hero />
         <WhatToolDoes />
+        <Features />
         <WhyItMatters />
         <HowItWorks />
         <WhatIsKeymap />
         <WhatIsZMK />
-        <Features />
         <HomeRowMods />
         <WhyKanata />
         <MacEnhancementGrid />
-        {/* Roadmap section commented out
-        <Roadmap />
-        */}
         <Newsletter />
       </main>
       <Footer />

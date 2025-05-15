@@ -54,7 +54,7 @@ const Roadmap = () => {
             Project Roadmap
           </h2>
           
-          <p className="text-lg text-keyboard-text/80 leading-relaxed">
+          <p className="text-lg text-keyboard-text/80 leading-relaxed mb-12">
             We're just getting started with this project. Here's where we're headed next.
           </p>
         </div>

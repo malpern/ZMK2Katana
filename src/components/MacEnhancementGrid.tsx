@@ -66,20 +66,18 @@ const MacEnhancementGrid = () => {
   return (
     <section id="mac-enhancements" className="py-20 bg-keyboard-dark">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-12 text-center">
-            <div className="inline-block bg-keyboard-primary/10 px-4 py-1.5 rounded-full mb-6">
-              <span className="text-keyboard-primary text-sm font-medium">More Resources</span>
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Superpower Your Mac Keyboard
-            </h2>
-            
-            <p className="text-keyboard-text/80 max-w-2xl mx-auto">
-              Looking for more ways to enhance your Mac keyboard experience? Check out these powerful tools and resources.
-            </p>
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="inline-block bg-keyboard-primary/10 px-4 py-1.5 rounded-full mb-6">
+            <span className="text-keyboard-primary text-sm font-medium">More Resources</span>
           </div>
+          
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Superpower Your Mac Keyboard
+          </h2>
+          
+          <p className="text-keyboard-text/80 max-w-2xl mx-auto mb-12">
+            Looking for more ways to enhance your Mac keyboard experience? Check out these powerful tools and resources.
+          </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {macTools.map((tool, index) => (

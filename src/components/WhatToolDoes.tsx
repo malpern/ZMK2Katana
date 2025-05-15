@@ -1,12 +1,13 @@
+
 import React from 'react';
 import { ArrowRight, Zap, CheckCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const WhatToolDoes = () => {
   return (
-    <section className="py-16 bg-keyboard-dark/80">
+    <section className="py-20 bg-keyboard-dark/80">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
             <Zap className="h-6 w-6 text-keyboard-accent" />
             <span className="text-xl font-bold text-keyboard-accent">What This Tool Does</span>
