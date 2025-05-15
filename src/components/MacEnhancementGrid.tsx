@@ -15,13 +15,13 @@ const macTools = [
     name: 'Leaderkey',
     description: 'Turn any key into a commander for your keyboard shortcuts',
     image: 'https://leaderkey.tinyblackhole.com/images/leaderkey-wide.png',
-    url: 'https://leaderkey.tinyblackhole.com/',
+    url: 'https://www.youtube.com/watch?v=EQYakLsYSAQ',
     icon: 'key'
   },
   {
     name: 'Keyboard Maestro',
     description: 'Powerful macro tool for automating your daily tasks',
-    image: 'https://www.keyboardmaestro.com/main/img/home/MacBook-front-on.png',
+    image: 'https://www.keyboardmaestro.com/img/v11/overview-dark@2x.png',
     url: 'https://www.keyboardmaestro.com/',
     icon: 'keyboard'
   },
