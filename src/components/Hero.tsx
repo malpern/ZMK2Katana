@@ -13,11 +13,11 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-keyboard-text via-keyboard-primary to-keyboard-secondary bg-clip-text text-transparent">
-            Unlock Mac Keyboard Superpowers
+            Your Layout. Your Logic. Any Keyboard.
           </h1>
           
           <p className="text-xl md:text-2xl text-keyboard-text/80 mb-10 leading-relaxed">
-            A bridge between firmware and software keyboard customization, bringing your ZMK configurations to Kanata for ultimate flexibility.
+            Convert ZMK firmware configs into Kanata-powered desktop remaps. Test, tweak, and run instantly on your everyday keyboard.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -38,6 +38,9 @@ const Hero = () => {
               alt="Zoomed in MacBook keyboard" 
               className="rounded-xl w-full max-w-2xl mx-auto shadow-2xl border border-white/10 float-element"
             />
+            <div className="absolute bottom-4 right-4 bg-black/70 px-3 py-1.5 rounded-full backdrop-blur-sm">
+              <span className="text-xs text-keyboard-text/90">Unlock Keyboard Superpowers</span>
+            </div>
           </div>
           
           {/* Nick's Keymap Editor + Kanata Section */}
