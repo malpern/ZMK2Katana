@@ -14,7 +14,7 @@ const macTools = [
   {
     name: 'Leaderkey',
     description: 'Turn any key into a commander for your keyboard shortcuts',
-    image: 'https://leaderkey.tinyblackhole.com/images/leaderkey-wide.png',
+    image: '/lovable-uploads/a8ab1077-0446-4fc1-827e-e2609c40cd0b.png',
     url: 'https://www.youtube.com/watch?v=EQYakLsYSAQ',
     icon: 'key'
   },
