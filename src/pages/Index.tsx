@@ -14,6 +14,7 @@ import Footer from '../components/Footer';
 import WhatIsZMK from '../components/WhatIsZMK';
 import HomeRowMods from '../components/HomeRowMods';
 import MacEnhancementGrid from '../components/MacEnhancementGrid';
+import WhoMadeThis from '../components/WhoMadeThis';
 
 const Index = () => {
   // Smooth scroll to anchor links
@@ -60,6 +61,7 @@ const Index = () => {
         <HomeRowMods />
         <WhyKanata />
         <MacEnhancementGrid />
+        <WhoMadeThis />
         <Newsletter />
       </main>
       <Footer />
