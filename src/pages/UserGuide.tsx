@@ -421,9 +421,9 @@ const UserGuide = () => {
                     <div className="p-4 flex-grow bg-black/50 font-mono">
                       <p className="text-green-500 mb-1">$ brew install kanata</p>
                       <p className="text-white/70 text-sm mb-3">
-                        ==> Downloading https://github.com/jtroo/kanata/releases/download/v1.2.3/kanata-macos-universal<br />
-                        ==> Downloading from https://objects.githubusercontent.com/github-production-release...<br />
-                        ######################################################################## 100.0%<br />
+                        {'==>'} Downloading https://github.com/jtroo/kanata/releases/download/v1.2.3/kanata-macos-universal<br />
+                        {'==>'} Downloading from https://objects.githubusercontent.com/github-production-release...<br />
+                        {'####################################################################### 100.0%'}<br />
                         {'==>'} Installing kanata<br />
                         🍺 /usr/local/Cellar/kanata/1.2.3: 5 files, 15.2MB, built in 3 seconds
                       </p>
