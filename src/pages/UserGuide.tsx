@@ -360,8 +360,8 @@ const UserGuide = () => {
             </p>
             <div className="flex justify-center mb-8">
               <img
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-                alt="MacBook keyboard"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                alt="Apple Magic Keyboard in front of iMac"
                 className="rounded-xl shadow-xl border border-white/10 max-w-full md:max-w-2xl"
               />
             </div>
@@ -753,10 +753,7 @@ const UserGuide = () => {
                   macOS Permissions
                 </h4>
                 <p className="text-keyboard-text/80 text-sm">
-                  You will need to grant input monitoring permissions to Kanata.
-                  macOS will prompt you to enable this in System Settings.
-                  You'll need to restart Kanata after granting these
-                  permissions.
+                  You will need to grant input monitoring permissions to Kanata. macOS will prompt you to enable this in System Settings. You'll need to restart Kanata after granting these permissions.
                 </p>
               </div>
             </div>
