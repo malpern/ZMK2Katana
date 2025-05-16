@@ -41,7 +41,7 @@ const WhatIsZMK = () => {
                   <li>Create shortcuts that are easy to remember</li>
                   <li>Launch apps with a single key</li>
                   <li>Control windows and screen layout</li>
-                  <li>Type text snippets instantly</li>
+
                   <li>Change key behavior by program</li>
                   <li>Access multiple layers of functions</li>
                 </ul>
