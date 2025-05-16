@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -14,6 +15,7 @@ import WhatIsZMK from "../components/WhatIsZMK";
 import HomeRowMods from "../components/HomeRowMods";
 import MacEnhancementGrid from "../components/MacEnhancementGrid";
 import WhoMadeThis from "../components/WhoMadeThis";
+import KeyFeatures from "../components/KeyFeatures";
 
 const Index = () => {
   // Smooth scroll to anchor links
@@ -53,6 +55,7 @@ const Index = () => {
         <Hero />
         <WhatIsZMK />
         <WhatToolDoes />
+        <KeyFeatures />
         <WhatIsKeymap />
         <HomeRowMods />
         <Features />
