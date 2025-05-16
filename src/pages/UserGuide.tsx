@@ -360,8 +360,8 @@ const UserGuide = () => {
             </p>
             <div className="flex justify-center mb-8">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-                alt="Apple Magic Keyboard in front of iMac"
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                alt="Person typing on laptop keyboard"
                 className="rounded-xl shadow-xl border border-white/10 max-w-full md:max-w-2xl"
               />
             </div>
