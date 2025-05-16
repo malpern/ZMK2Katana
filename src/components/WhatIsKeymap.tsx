@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ExternalLink } from "lucide-react";
@@ -17,7 +18,7 @@ const keyboards = [
   },
   {
     name: "Lily58",
-    image: "/lovable-uploads/7928c1b7-2d65-4b21-901c-a12328629431.png",
+    image: "/ZMK2Katana/lovable-uploads/7928c1b7-2d65-4b21-901c-a12328629431.png",
     url: "https://typeractive.xyz",
   },
   {
@@ -54,7 +55,7 @@ const WhatIsKeymap = () => {
                   className="block"
                 >
                   <img
-                    src="/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png"
+                    src="/ZMK2Katana/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png"
                     alt="Nick's Keymap Editor Screenshot"
                     className="rounded-lg shadow-xl border border-white/10 w-full object-cover object-left h-64"
                   />

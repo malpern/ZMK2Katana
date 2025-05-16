@@ -360,7 +360,7 @@ const UserGuide = () => {
             </p>
             <div className="flex justify-center mb-8">
               <img
-                src="/lovable-uploads/89d2bddf-743c-4c33-86fa-1fdf30f12a3e.png"
+                src="/ZMK2Katana/lovable-uploads/89d2bddf-743c-4c33-86fa-1fdf30f12a3e.png"
                 alt="Close-up of MacBook keyboard"
                 className="rounded-xl shadow-xl border border-white/10 max-w-full md:max-w-2xl"
               />
@@ -443,7 +443,7 @@ const UserGuide = () => {
                       </div>
                       <div className="p-4">
                         <img
-                          src="/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png"
+                          src="/ZMK2Katana/lovable-uploads/82aa7956-e3ac-462f-b29e-bfd8706c76c4.png"
                           alt="Nick's Keymap Editor Screenshot"
                           className="rounded border border-gray-700 shadow-lg"
                         />
