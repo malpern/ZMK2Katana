@@ -361,7 +361,7 @@ const UserGuide = () => {
             </p>
             <div className="flex justify-center mb-8">
               <img
-                src="https://images.unsplash.com/photo-1563191911-e65f8655ebf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                src="/lovable-uploads/89d2bddf-743c-4c33-86fa-1fdf30f12a3e.png"
                 alt="Close-up of MacBook keyboard"
                 className="rounded-xl shadow-xl border border-white/10 max-w-full md:max-w-2xl"
               />
