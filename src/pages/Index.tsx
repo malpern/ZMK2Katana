@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -54,11 +53,10 @@ const Index = () => {
         <Hero />
         <WhatIsZMK />
         <WhatToolDoes />
-        <Features />
-        <WhyItMatters />
         <WhatIsKeymap />
         <HomeRowMods />
-        <HowItWorks />
+        <Features />
+        <WhyItMatters />
         <WhyKanata />
         <MacEnhancementGrid />
         <WhoMadeThis />

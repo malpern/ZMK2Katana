@@ -32,22 +32,10 @@ const Header = () => {
               User Guide
             </Link>
             <a
-              href="#why"
-              className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
-            >
-              Why It Matters
-            </a>
-            <a
-              href="#howitworks"
-              className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
-            >
-              How It Works
-            </a>
-            <a
               href="#mac-enhancements"
               className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
             >
-              ⌨️ Superpowers
+              Resources
             </a>
           </nav>
 
@@ -97,25 +85,11 @@ const Header = () => {
               User Guide
             </Link>
             <a
-              href="#why"
-              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Why It Matters
-            </a>
-            <a
-              href="#howitworks"
-              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              How It Works
-            </a>
-            <a
               href="#mac-enhancements"
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              ⌨️ Superpowers
+              Resources
             </a>
             <a
               href="https://github.com/malpern/zmk-to-kanata"

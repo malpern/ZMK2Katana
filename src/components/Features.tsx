@@ -27,7 +27,7 @@ const Features = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <div className="inline-block bg-keyboard-secondary/10 px-4 py-1.5 rounded-full mb-6">
             <span className="text-keyboard-secondary text-sm font-medium">
-              Key Features
+              New Capabilities
             </span>
           </div>
 

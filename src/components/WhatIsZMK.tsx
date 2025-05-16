@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Keyboard, Command, Key } from "lucide-react";
 
@@ -32,34 +31,25 @@ const WhatIsZMK = () => {
                 <h3 className="text-2xl font-bold mb-4 text-left">
                   Your keyboard, reimagined
                 </h3>
-                
                 <p className="mb-4 text-keyboard-text/80 leading-relaxed text-left">
-                  A <span className="font-semibold">keymap</span> is the configuration that determines what happens when you press each key on your keyboard. On programmable keyboards, it's the software blueprint that customizes your typing experience.
+                  A <span className="font-semibold">keymap</span> is the configuration that determines what happens when you press each key. On programmable keyboards, it's the software blueprint for customizing your typing experience.
                 </p>
-                
-                <p className="mb-6 text-keyboard-text/80 leading-relaxed text-left">
-                  Imagine transforming your keyboard into a powerful command center where every key does exactly what you want, where you want it.
-                </p>
-                
                 <h4 className="text-xl font-semibold mb-2 text-left">
                   With custom keymaps, you can:
                 </h4>
-                
                 <ul className="list-disc pl-5 text-keyboard-text/80 space-y-2 mb-6 text-left">
-                  <li>Create intuitive shortcuts that are easy to remember and reach</li>
-                  <li>Launch applications with a single keypress</li>
-                  <li>Control window management and screen arrangement</li>
-                  <li>Type frequently used text snippets with a keystroke</li>
-                  <li>Change keyboard behavior based on what program you're using</li>
-                  <li>Access multiple "layers" of keys to fit more functionality</li>
+                  <li>Create shortcuts that are easy to remember</li>
+                  <li>Launch apps with a single key</li>
+                  <li>Control windows and screen layout</li>
+                  <li>Type text snippets instantly</li>
+                  <li>Change key behavior by program</li>
+                  <li>Access multiple layers of functions</li>
                 </ul>
-                
                 <p className="mb-4 text-keyboard-text/80 leading-relaxed text-left">
-                  Until now, these powerful customizations were mainly available to people with expensive programmable keyboards and the technical know-how to flash firmware.
+                  Historically, advanced customizations like home row mods were mostly for high-end programmable keyboards and required technical expertise.
                 </p>
-                
                 <p className="text-keyboard-text/80 leading-relaxed text-left">
-                  <strong className="text-keyboard-primary">That changes today.</strong> This converter lets you bring advanced keymap features to your everyday keyboard without special hardware or programming skills.
+                  <strong className="text-keyboard-primary">This is no longer the case.</strong> With modern tools, you can now implement sophisticated keymap features on any keyboard, without needing specialized hardware or programming knowledge.
                 </p>
               </div>
             </div>

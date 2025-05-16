@@ -20,11 +20,10 @@ const WhatToolDoes = () => {
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">
-                    Converts ZMK keymaps to Kanata configs
+                    Accepts files from Nick's Keymap Editor
                   </h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    Upload your ZMK (DTS or JSON) files and get Kanata-ready
-                    configs.
+                    Directly use exports from the visual GUI.
                   </p>
                 </div>
               </li>
@@ -80,11 +79,11 @@ const WhatToolDoes = () => {
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">
-                    Keeps your ZMK logic intact
+                    Converts ZMK keymaps to Kanata configs
                   </h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    No need to manually recreate your layout—everything is
-                    preserved.
+                    Upload your ZMK (DTS or JSON) files and get Kanata-ready
+                    configs.
                   </p>
                 </div>
               </li>
@@ -93,10 +92,11 @@ const WhatToolDoes = () => {
                 <CheckCircle className="h-6 w-6 text-keyboard-primary mr-4 mt-0.5 flex-shrink-0" />
                 <div className="text-left">
                   <h3 className="text-xl font-semibold text-keyboard-text">
-                    Accepts files from Nick's Keymap Editor
+                    Keeps your ZMK logic intact
                   </h3>
                   <p className="text-keyboard-text/70 mt-1">
-                    Directly use exports from the visual GUI.
+                    No need to manually recreate your layout—everything is
+                    preserved.
                   </p>
                 </div>
               </li>

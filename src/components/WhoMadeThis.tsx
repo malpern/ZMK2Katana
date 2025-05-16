@@ -20,11 +20,18 @@ const WhoMadeThis = () => {
           <div className="glass-card p-8">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="shrink-0">
-                <img
-                  src="https://pbs.twimg.com/profile_images/1262747756457652225/Fazb0lNd_400x400.jpg"
-                  alt="Micah Alpern"
-                  className="w-40 h-40 rounded-full border-4 border-keyboard-primary/30 shadow-lg shadow-keyboard-primary/20"
-                />
+                <a
+                  href="https://x.com/malpern"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Micah Alpern on Twitter"
+                >
+                  <img
+                    src="https://pbs.twimg.com/profile_images/1262747756457652225/Fazb0lNd_400x400.jpg"
+                    alt="Micah Alpern"
+                    className="w-40 h-40 rounded-full border-4 border-keyboard-primary/30 shadow-lg shadow-keyboard-primary/20"
+                  />
+                </a>
               </div>
 
               <div className="text-left space-y-4">
