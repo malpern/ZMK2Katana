@@ -19,24 +19,24 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#features"
+            <Link
+              to="/#features"
               className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
             >
               Features
-            </a>
+            </Link>
             <Link
               to="/user-guide"
               className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
             >
               User Guide
             </Link>
-            <a
-              href="#mac-enhancements"
+            <Link
+              to="/#mac-enhancements"
               className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
             >
               Resources
-            </a>
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -70,13 +70,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-keyboard-dark border-t border-white/10 py-4">
           <div className="container mx-auto px-4 flex flex-col space-y-4">
-            <a
-              href="#features"
+            <Link
+              to="/#features"
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Features
-            </a>
+            </Link>
             <Link
               to="/user-guide"
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
@@ -84,13 +84,13 @@ const Header = () => {
             >
               User Guide
             </Link>
-            <a
-              href="#mac-enhancements"
+            <Link
+              to="/#mac-enhancements"
               className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Resources
-            </a>
+            </Link>
             <a
               href="https://github.com/malpern/zmk-to-kanata"
               target="_blank"

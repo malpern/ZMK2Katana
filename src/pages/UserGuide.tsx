@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -674,8 +673,7 @@ const UserGuide = () => {
                     Configure Kanata
                   </h3>
                   <p className="text-keyboard-text/80 leading-relaxed mb-4">
-                    Place the converted Kanata configuration file in an
-                    appropriate location:
+                    Place the converted Kanata configuration file in the appropriate location for your operating system. You may need to grant input monitoring or accessibility permissions depending on your OS. Follow any prompts or refer to the Kanata documentation for your platform.
                   </p>
 
                   <div className="bg-gray-900/60 rounded-lg p-4 mb-6 font-mono text-sm overflow-x-auto relative group">
@@ -690,9 +688,13 @@ const UserGuide = () => {
                       <Copy className="h-4 w-4 text-keyboard-text/70 hover:text-keyboard-text" />
                     </button>
                     <code className="text-keyboard-text/90">
+                      # Example for Linux/macOS:
                       mkdir -p ~/.config/kanata
-                      <br />
                       cp path/to/output.kbd ~/.config/kanata/config.kbd
+                      <br />
+                      # Example for Windows (PowerShell):
+                      New-Item -ItemType Directory -Path $env:APPDATA\kanata -Force
+                      Copy-Item path\to\output.kbd $env:APPDATA\kanata\config.kbd
                     </code>
                   </div>
                 </div>
@@ -751,11 +753,8 @@ const UserGuide = () => {
 
               <div className="bg-keyboard-secondary/10 p-4 rounded-lg border border-keyboard-secondary/20 mt-8">
                 <h4 className="font-semibold text-keyboard-secondary mb-2">
-                  macOS Permissions
+                  <strong>macOS Permissions:</strong> You will need to grant input monitoring permissions to Kanata. macOS will prompt you to enable this in System Settings. You'll need to restart Kanata after granting these permissions.
                 </h4>
-                <p className="text-keyboard-text/80 text-sm">
-                  You will need to grant input monitoring permissions to Kanata. macOS will prompt you to enable this in System Settings. You'll need to restart Kanata after granting these permissions.
-                </p>
               </div>
             </div>
           </section>
@@ -991,6 +990,11 @@ const UserGuide = () => {
                     equivalents
                   </li>
                 </ul>
+                <p className="mt-6 text-sm">
+                  <a href="#kanata-feature-requests" className="text-keyboard-primary underline hover:text-keyboard-primary/80 transition-colors">
+                    How Kanata could help... ↓
+                  </a>
+                </p>
               </div>
             </div>
           </section>
