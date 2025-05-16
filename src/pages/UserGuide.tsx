@@ -10,6 +10,8 @@ import {
   Github,
   CheckCircle,
   Copy,
+  LayoutGrid,
+  RefreshCcw
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
@@ -108,6 +110,214 @@ const UserGuide = () => {
   spc_fn (tap-hold-release 200 spc (layer-toggle fn))
 )`;
 
+  const faqData = [
+    {
+      question: "My combo or macro doesn't work in Kanata.",
+      answer:
+        "Only simple combos (e.g., A+B → ESC) are supported. See the relevant section above and manually define complex combos in your Kanata config.",
+    },
+    {
+      question: "The converter gives an error about an unsupported feature.",
+      answer:
+        'Check this document for workarounds or see the User Guide for more help.',
+    },
+    {
+      question: "How do I report a limitation or request support for a feature?",
+      answer:
+        'Open an issue on GitHub and describe your use case and ZMK config.',
+    },
+    {
+      question: "Where can I get more help?",
+      answer:
+        'See the User Guide, README, or CONTRIBUTING.md.',
+    },
+    {
+      question: "My custom home row mod is not working as expected.",
+      answer:
+        'Standard properties (timing, flavor, bindings) are mapped. Check the Kanata output for comments about unmapped properties and adjust manually if needed.',
+    },
+    {
+      question: "Can I use Unicode output in my Kanata config?",
+      answer:
+        "Unicode output is supported on macOS via Kanata's (unicode ...) action. It is experimental on Windows and not supported on Linux. On non-macOS platforms, the converter emits a warning comment instead of Unicode output. See the Kanata documentation for more information.",
+    },
+  ];
+
+  function FAQ() {
+    const [openIndexes, setOpenIndexes] = React.useState<number[]>([]);
+
+    const toggle = (idx: number) => {
+      setOpenIndexes((prev) =>
+        prev.includes(idx)
+          ? prev.filter((i) => i !== idx)
+          : [...prev, idx]
+      );
+    };
+
+    return (
+      <div className="space-y-4">
+        {faqData.map((item, idx) => (
+          <div key={idx} className="border border-keyboard-primary/20 rounded-lg overflow-hidden">
+            <button
+              className="w-full flex justify-between items-center px-6 py-4 bg-keyboard-dark/40 hover:bg-keyboard-primary/10 transition-colors text-left focus:outline-none"
+              onClick={() => toggle(idx)}
+              aria-expanded={openIndexes.includes(idx)}
+              aria-controls={`faq-panel-${idx}`}
+            >
+              <span className="font-medium text-keyboard-primary text-lg">{item.question}</span>
+              <span className={`ml-4 transition-transform ${openIndexes.includes(idx) ? 'rotate-90' : ''}`}>▶</span>
+            </button>
+            {openIndexes.includes(idx) && (
+              <div
+                id={`faq-panel-${idx}`}
+                className="px-6 pb-4 pt-2 text-keyboard-text/80 bg-keyboard-dark/60 animate-fade-in"
+              >
+                {item.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  const kanataFeatureData = [
+    {
+      title: "Advanced Combo Support",
+      feature: "Native support for combos that can trigger not just simple key outputs, but also layer changes, macros, or advanced logic (e.g., combos that activate a layer or run a macro).",
+      benefit: "Would allow the converter to map all ZMK combos, including those with modifiers, macros, or layer actions, without manual intervention.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata/issues/1556" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">issue #1556</a> for user requests and maintainer discussion about shift-layer and remapping shifted keys to arbitrary actions.
+        </>
+      ),
+    },
+    {
+      title: "Custom Behavior Extensibility",
+      feature: "A plugin or scripting interface for defining custom behaviors (e.g., advanced hold-tap, retro-tap, or custom mod-tap logic) with flexible parameters.",
+      benefit: "Would enable direct mapping of ZMK's custom behaviors and advanced hold-tap features, reducing the need for TODO comments and manual edits.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata/issues/1556" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">issue #1556</a> and related comments for discussion of extensible behavior needs.
+        </>
+      ),
+    },
+    {
+      title: "Macro Enhancements",
+      feature: "Support for complex macros, including: Conditionals (if/else logic), Delays/timing control within macros, Macro composition (macros calling other macros)",
+      benefit: "Would allow the converter to fully translate ZMK macros, including those with advanced logic or timing requirements.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata/discussions/1578" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">discussion #1578</a> for user workarounds and limitations with macros and external scripting.
+        </>
+      ),
+    },
+    {
+      title: "Unicode Input and Output Improvements",
+      feature: "Full Unicode input/output support on all platforms (not just macOS). Consistent Unicode handling in macros and behaviors.",
+      benefit: "Would enable the converter to support ZMK's Unicode features everywhere, not just on macOS.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata/issues/1556" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">issue #1556</a> and <a href="https://github.com/jtroo/kanata/discussions/1578" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">discussion #1578</a> for Unicode limitations and user workarounds.
+        </>
+      ),
+    },
+    {
+      title: "Advanced Modifier and Sticky Modifier Support",
+      feature: "More flexible modifier handling, including sticky modifiers and advanced modifier combinations. Ability to define and use custom modifier behaviors.",
+      benefit: "Would allow for accurate conversion of ZMK's advanced modifier features.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata/issues/1556" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">issue #1556</a> for user requests and discussion of modifier handling.
+        </>
+      ),
+    },
+    {
+      title: "Layer Switching Parity",
+      feature: "Support for all ZMK layer switching semantics (e.g., momentary, toggle, one-shot, etc.) with matching syntax and behavior.",
+      benefit: "Would allow the converter to map all ZMK layer actions directly, without approximation.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata/issues/413" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">issue #413</a> and <a href="https://github.com/jtroo/kanata/discussions/422" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">discussion #422</a> for edge cases and limitations in layer switching.
+        </>
+      ),
+    },
+    {
+      title: "Error Reporting and Recovery",
+      feature: "Structured error reporting and partial config loading, so that Kanata can load and report on incomplete or partially invalid configs.",
+      benefit: "Would allow the converter to emit partial configs with warnings, improving the user experience during migration.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata#how-you-can-help" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">README</a> and general feedback in issues for ongoing usability improvements.
+        </>
+      ),
+    },
+    {
+      title: "Config Import/Include Mechanism",
+      feature: "A robust include/import system for Kanata configs, similar to C preprocessor includes in ZMK.",
+      benefit: "Would allow the converter to map ZMK's modular config structure more directly.",
+      reference: (
+        <>No direct issue, but this is a common feature in QMK/ZMK and is missing in Kanata.</>
+      ),
+    },
+    {
+      title: "Tap-Dance Feature Parity",
+      feature: "Native support for tap-vs-hold in tap-dance (not just hold-tap). Modifier-aware tap-dance actions (e.g., tap with shift = different action). Per-action timing for tap-dance actions.",
+      benefit: "Would allow the converter to map all ZMK tap-dance scenarios directly, including tap-vs-hold and modifier-aware actions.",
+      reference: (
+        <>
+          See <a href="https://github.com/jtroo/kanata/blob/master/docs/config.md#tap-dance" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">Kanata Tap-Dance Config Reference</a> and <a href="https://zmk.dev/docs/behaviors/tap-dance/" target="_blank" rel="noopener noreferrer" className="text-keyboard-primary underline">ZMK Tap-Dance Docs</a>.
+        </>
+      ),
+    },
+  ];
+
+  function KanataFeatureRequests() {
+    const [openIndexes, setOpenIndexes] = React.useState<number[]>([]);
+
+    const toggle = (idx: number) => {
+      setOpenIndexes((prev) =>
+        prev.includes(idx)
+          ? prev.filter((i) => i !== idx)
+          : [...prev, idx]
+      );
+    };
+
+    return (
+      <div className="space-y-4">
+        {kanataFeatureData.map((item, idx) => (
+          <div key={idx} className="border border-keyboard-primary/20 rounded-lg overflow-hidden">
+            <button
+              className="w-full flex justify-between items-center px-6 py-4 bg-keyboard-dark/40 hover:bg-keyboard-primary/10 transition-colors text-left focus:outline-none"
+              onClick={() => toggle(idx)}
+              aria-expanded={openIndexes.includes(idx)}
+              aria-controls={`kanata-feature-panel-${idx}`}
+            >
+              <span className="font-medium text-keyboard-primary text-lg">{item.title}</span>
+              <span className={`ml-4 transition-transform ${openIndexes.includes(idx) ? 'rotate-90' : ''}`}>▶</span>
+            </button>
+            {openIndexes.includes(idx) && (
+              <div
+                id={`kanata-feature-panel-${idx}`}
+                className="px-6 pb-4 pt-2 text-keyboard-text/80 bg-keyboard-dark/60 animate-fade-in"
+              >
+                <div className="mb-2">
+                  <span className="font-semibold text-keyboard-highlight">Feature Needed: </span>{item.feature}
+                </div>
+                <div className="mb-2">
+                  <span className="font-semibold text-keyboard-highlight">Benefit: </span>{item.benefit}
+                </div>
+                <div className="mb-2">
+                  <span className="font-semibold text-keyboard-highlight">Reference: </span>{item.reference}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-keyboard-dark text-keyboard-text antialiased">
       <Header />
@@ -118,7 +328,7 @@ const UserGuide = () => {
             <Link to="/">
               <Button
                 variant="outline"
-                className="text-keyboard-text/70 hover:text-keyboard-primary flex items-center gap-2"
+                className="border-keyboard-primary text-keyboard-primary hover:bg-keyboard-primary/10 flex items-center gap-2"
               >
                 <ArrowLeft className="h-4 w-4" />
                 Back to Home
@@ -146,11 +356,7 @@ const UserGuide = () => {
               <h2 className="text-2xl md:text-3xl font-bold">Overview</h2>
             </div>
             <p className="text-keyboard-text/80 leading-relaxed mb-6">
-              This guide outlines how to test the complete workflow from using a
-              ZMK configurator to create a keymap, converting it to Kanata
-              format, and applying it to a MacBook's built-in keyboard. This
-              workflow effectively turns any ZMK configurator into a MacBook
-              keyboard configurator.
+              This guide outlines how to test the complete workflow from using Nick's Keymap Editor to create a keymap, converting it to Kanata format, and applying it to a MacBook's built-in keyboard. This workflow effectively turns any ZMK keymap into a MacBook keyboard configuration.
             </p>
             <div className="flex justify-center mb-8">
               <img
@@ -163,12 +369,12 @@ const UserGuide = () => {
             {/* Workflow diagram */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
               <div className="glass-card p-4 flex-1 text-center flex flex-col items-center">
-                <Code className="h-10 w-10 text-keyboard-primary mb-3" />
-                <p className="font-medium">ZMK Configurator</p>
+                <LayoutGrid className="h-10 w-10 text-keyboard-primary mb-3" />
+                <p className="font-medium">Nick's Keymap Editor</p>
               </div>
               <ArrowRight className="h-6 w-6 text-keyboard-text/50 transform rotate-90 md:rotate-0" />
               <div className="glass-card p-4 flex-1 text-center flex flex-col items-center">
-                <Terminal className="h-10 w-10 text-keyboard-accent mb-3" />
+                <RefreshCcw className="h-10 w-10 text-keyboard-accent mb-3" />
                 <p className="font-medium">ZMK to Kanata Converter</p>
               </div>
               <ArrowRight className="h-6 w-6 text-keyboard-text/50 transform rotate-90 md:rotate-0" />
@@ -187,7 +393,7 @@ const UserGuide = () => {
                   1
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold">
-                  Create a ZMK Keymap using a ZMK Configurator
+                  Create a ZMK Keymap using Nick's Keymap Editor
                 </h2>
               </div>
 
@@ -195,7 +401,7 @@ const UserGuide = () => {
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-1/2">
                     <p className="text-keyboard-text/80 leading-relaxed mb-4">
-                      Start by accessing a ZMK configurator web interface to
+                      Start by accessing Nick's Keymap Editor web interface to
                       design your custom keymap. Nick's Keymap Editor is
                       recommended for its user-friendly interface.
                     </p>
@@ -711,7 +917,7 @@ const UserGuide = () => {
                   <ArrowRight className="h-6 w-6 text-keyboard-text/50 transform rotate-90 md:rotate-0" />
                   <div className="text-center flex flex-col items-center">
                     <div className="bg-keyboard-dark p-3 rounded-full mb-3">
-                      <Terminal className="h-6 w-6 text-keyboard-accent" />
+                      <RefreshCcw className="h-6 w-6 text-keyboard-accent" />
                     </div>
                     <p>Re-Run Converter</p>
                   </div>
@@ -797,25 +1003,48 @@ const UserGuide = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
                 Documentation
               </h2>
-
               <p className="text-keyboard-text/80 leading-relaxed mb-8">
                 Throughout the testing process, document any limitations
                 discovered, workarounds for common issues, best practices for
                 creating ZMK configurations that convert well to Kanata, and
                 setup instructions for end users.
               </p>
-
               <div className="mb-6">
-                <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-black font-medium px-6 py-5 flex items-center gap-2">
-                  <Github className="h-5 w-5" />
-                  Contribute Documentation
-                </Button>
+                <a
+                  href="https://github.com/malpern/zmk-to-kanata/tree/main/docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-black font-medium px-6 py-5 flex items-center gap-2">
+                    <Github className="h-5 w-5" />
+                    Contribute Documentation
+                  </Button>
+                </a>
               </div>
-
               <p className="text-keyboard-text/60 text-sm italic">
                 Help us improve this tool by documenting your experiences and
                 sharing them with the community.
               </p>
+            </div>
+          </section>
+
+          {/* FAQ & Troubleshooting */}
+          <section className="mb-16" id="faq">
+            <div className="glass-card p-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                Frequently Asked Questions
+              </h2>
+              <FAQ />
+            </div>
+          </section>
+
+          {/* Kanata Feature Requests for Complete Conversion */}
+          <section className="mb-16" id="kanata-feature-requests">
+            <div className="glass-card p-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                What Kanata Could Add to Enable a Better Converter
+              </h2>
+              <KanataFeatureRequests />
             </div>
           </section>
 
