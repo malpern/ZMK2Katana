@@ -1,109 +1,122 @@
+
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Code, Menu, X, Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "./ui/button";
+import { Menu, X, Github } from "lucide-react";
+import { useMediaQuery } from "@/hooks/use-mobile";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const location = useLocation();
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "User Guide", href: "/user-guide" },
+    {
+      label: "GitHub",
+      href: "https://github.com/username/ZMK2Katana",
+      external: true,
+    },
+  ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-keyboard-dark/80 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Code className="h-6 w-6 text-keyboard-primary" />
-            <span className="font-display font-bold text-lg tracking-tight">
-              ZMK2Kanata
-            </span>
-          </div>
+    <header className="fixed top-0 left-0 w-full bg-keyboard-dark/80 backdrop-blur-lg z-50 py-4 border-b border-white/5">
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <Link
+          to="/"
+          className="font-bold text-xl md:text-2xl bg-gradient-to-r from-keyboard-primary via-keyboard-accent to-keyboard-secondary bg-clip-text text-transparent"
+        >
+          ZMK2Kanata
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/#features"
-              className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
+        {isMobile ? (
+          <>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleMenu}
+              className="text-keyboard-text"
             >
-              Features
-            </Link>
-            <Link
-              to="/user-guide"
-              className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
-            >
-              User Guide
-            </Link>
-            <Link
-              to="/#mac-enhancements"
-              className="text-sm font-medium text-keyboard-text hover:text-keyboard-primary transition-colors"
-            >
-              Resources
-            </Link>
-          </nav>
+              {menuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </Button>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="https://github.com/malpern/zmk-to-kanata"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="bg-keyboard-primary hover:bg-keyboard-primary/80 text-black font-medium flex items-center gap-2">
-                <Github className="h-4 w-4" />
-                GitHub
-              </Button>
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-keyboard-text hover:text-keyboard-primary"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
+            {menuOpen && (
+              <div className="absolute top-16 left-0 right-0 bg-keyboard-dark/95 backdrop-blur-lg border-b border-white/5 p-4 animate-in slide-in-from-top">
+                <nav className="flex flex-col space-y-4">
+                  {navItems.map((item, idx) =>
+                    item.external ? (
+                      <a
+                        key={idx}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 hover:bg-white/5 rounded-md transition-colors text-keyboard-text/80 hover:text-keyboard-text"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.label === "GitHub" && (
+                          <Github className="h-4 w-4" />
+                        )}
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={idx}
+                        to={item.href}
+                        className={`px-4 py-2 hover:bg-white/5 rounded-md transition-colors ${
+                          location.pathname === item.href
+                            ? "text-keyboard-primary font-medium"
+                            : "text-keyboard-text/80 hover:text-keyboard-text"
+                        }`}
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    )
+                  )}
+                </nav>
+              </div>
             )}
-          </button>
-        </div>
+          </>
+        ) : (
+          <nav className="flex items-center space-x-1">
+            {navItems.map((item, idx) =>
+              item.external ? (
+                <a
+                  key={idx}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 px-3 py-2 hover:bg-white/5 rounded-md transition-colors text-keyboard-text/80 hover:text-keyboard-text"
+                >
+                  {item.label === "GitHub" && <Github className="h-4 w-4" />}
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={idx}
+                  to={item.href}
+                  className={`px-3 py-2 hover:bg-white/5 rounded-md transition-colors ${
+                    location.pathname === item.href
+                      ? "text-keyboard-primary font-medium"
+                      : "text-keyboard-text/80 hover:text-keyboard-text"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+          </nav>
+        )}
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-keyboard-dark border-t border-white/10 py-4">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            <Link
-              to="/#features"
-              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Features
-            </Link>
-            <Link
-              to="/user-guide"
-              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              User Guide
-            </Link>
-            <Link
-              to="/#mac-enhancements"
-              className="text-base font-medium text-keyboard-text hover:text-keyboard-primary transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Resources
-            </Link>
-            <a
-              href="https://github.com/malpern/zmk-to-kanata"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-keyboard-primary hover:bg-keyboard-primary/90 text-black font-medium py-2 px-4 rounded flex items-center justify-center gap-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <Github className="h-5 w-5" />
-              GitHub
-            </a>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
