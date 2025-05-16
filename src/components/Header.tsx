@@ -19,7 +19,7 @@ const Header = () => {
     { label: "User Guide", href: "/user-guide" },
     {
       label: "GitHub",
-      href: "https://github.com/username/ZMK2Katana",
+      href: "https://github.com/malpern/zmk-to-kanata",
       external: true,
     },
   ];
