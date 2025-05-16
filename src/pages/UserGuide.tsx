@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -360,8 +361,8 @@ const UserGuide = () => {
             </p>
             <div className="flex justify-center mb-8">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
-                alt="Person typing on laptop keyboard"
+                src="https://images.unsplash.com/photo-1563191911-e65f8655ebf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
+                alt="Close-up of MacBook keyboard"
                 className="rounded-xl shadow-xl border border-white/10 max-w-full md:max-w-2xl"
               />
             </div>
