@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -95,7 +94,12 @@
     @apply bg-keyboard-dark text-keyboard-text font-sans;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 
@@ -110,7 +114,9 @@
 
   .typing-text {
     @apply font-mono overflow-hidden whitespace-nowrap border-r-4 pr-1;
-    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+    animation:
+      typing 3.5s steps(40, end),
+      blink 0.75s step-end infinite;
   }
 
   /* Keyboard key styling */
@@ -138,9 +144,18 @@
 
 /* Hero section background with glow effect */
 .hero-bg {
-  background: radial-gradient(circle at top center, rgba(124, 58, 237, 0.1) 0%, rgba(0, 0, 0, 0) 70%),
-              radial-gradient(circle at bottom left, rgba(43, 74, 237, 0.1) 0%, rgba(0, 0, 0, 0) 70%),
-              linear-gradient(180deg, #151823 0%, #1A1F32 100%);
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(124, 58, 237, 0.1) 0%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(43, 74, 237, 0.1) 0%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    linear-gradient(180deg, #151823 0%, #1a1f32 100%);
 }
 
 /* Custom animation for float effect on keyboard elements */
@@ -167,7 +182,7 @@
 .gradient-border {
   position: relative;
   border-radius: 0.5rem;
-  background: linear-gradient(to right, #7C3AED, #2563EB);
+  background: linear-gradient(to right, #7c3aed, #2563eb);
   padding: 1px;
 }
 
